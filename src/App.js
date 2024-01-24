@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Admin from "./pages/Admin";
+import "./assets/style/global/App.scss";
 
 function App() {
   return (

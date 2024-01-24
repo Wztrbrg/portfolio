@@ -1,11 +1,13 @@
 import NavBar from "../components/NavBar";
+import HeroSection from "../components/HeroSection";
+import "../assets/style/pages/Home.scss";
 
 function Home() {
   return (
     <>
-      <NavBar></NavBar>
       <div className="home-wrapper">
-        <h1>Home page</h1>
+        <NavBar></NavBar>
+        <HeroSection></HeroSection>
       </div>
     </>
   )

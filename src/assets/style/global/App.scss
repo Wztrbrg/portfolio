@@ -1,0 +1,18 @@
+@import "./variables";
+@import "./mixins";
+
+*,
+body,
+html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: $offwhite;
+  text-decoration: none;
+  font-family: $mainfont;
+}
+
+body {
+  background-color: $offwhite;
+  padding: 16px;
+}

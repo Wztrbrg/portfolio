@@ -1,0 +1,86 @@
+@import "../global/mixins";
+@import "../global/variables";
+
+.top-nav-header {
+  opacity: 0;
+  transition: 0.5s ease;
+}
+
+.top-nav-header.hidden {
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .top-nav.hidden {
+    width: 100%;
+    padding: 24px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-item.hidden {
+      padding: 0 16px;
+      font-weight: 700;
+    }
+
+    .nav-btn.hidden {
+      display: none;
+    }
+  }
+}
+
+.top-nav-header.visible {
+  opacity: 1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 60px;
+  background-color: $offwhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .top-nav.visible {
+    width: 100%;
+    padding: 8px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .nav-logo {
+      color: $nearblack;
+    }
+
+    .nav-item.visible {
+      padding: 0 16px;
+      font-weight: 700;
+      color: $nearblack;
+    }
+
+    .nav-btn.visible {
+      display: inline-block;
+      width: 200px;
+      height: 60px;
+      border: none;
+      border-radius: 200px;
+      color: $offwhite;
+      background-color: $purple;
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    .nav-btn.visible:hover {
+      cursor: pointer;
+      background-color: #c3e80a;
+      color: $nearblack;
+      transition: 0.3s ease;
+    }
+  }
+}
