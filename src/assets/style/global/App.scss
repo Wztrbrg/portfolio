@@ -7,7 +7,7 @@ html {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: $offwhite;
+  color: $nearblack;
   text-decoration: none;
   font-family: $mainfont;
 }
@@ -15,4 +15,21 @@ html {
 body {
   background-color: $offwhite;
   padding: 16px;
+}
+
+.sec-btn {
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 2000px;
+  color: $nearblack;
+  background-color: $offwhite;
+  font-size: 16px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.sec-btn:hover {
+  scale: 1.15;
+  cursor: pointer;
 }
