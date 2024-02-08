@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index: 5000000;
 
   .top-nav.hidden {
     width: 100%;
@@ -53,7 +53,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index: 5000000;
 
   .top-nav.visible {
     width: 100%;
