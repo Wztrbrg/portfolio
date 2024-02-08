@@ -23,22 +23,26 @@ function CardSlider() {
     },
     {
       id: 2,
-      title: "Card Title2",
-      description: "A simple calculator made with JavaScript.",
+      title: "Brick Canvas",
+      description: "Brick Canvas is a service where a user can upload their image, edit it and turn it into a Lego-like mosaic. The service is built with React.js and uses Canvas for the image editing and processing.",
+      preview: "https://wztrbrg.github.io/brick-canvas/",
+      code: "https://github.com/Wztrbrg/brick-canvas",
       image: sLego,
       large: lLego,
     },
     {
       id: 3,
-      title: "Card Title3",
-      description: "A simple calculator made with JavaScript.",
+      title: "Fredagskollegiet",
+      description: "Fredagskollegiet is a single-page website that is built on WordPress with Elementor PRO and utilizes the Bedrock boilerplate with Deployer. This project is for a real client and was made during my internship.",
+      preview: "#",
       image: sFredag,
       large: lFredag,
     },
     {
       id: 4,
-      title: "Card Title4",
-      description: "A simple calculator made with JavaScript.",
+      title: "Kristjan Andresson",
+      description: "Kristjanandresson is a single-page website that is built on WordPress with Elementor PRO and utilizes the Bedrock boilerplate with Deployer. This project is for a real client and was made during my internship.",
+      preview: "#",
       image: sKristjan,
       large: lKristjan,
     },
@@ -74,8 +78,8 @@ function CardSlider() {
             }
           </div>
           <div className="projects-header">
-            <h2 className="projects-heading">Ta en titt på några av mina projekt</h2>
-            <p className="projects-para">Några av projekten är arbeten som jag gjort när jag studerade, några är real case arbeten utförda åt företaget jag haft praktik hos</p>
+            <h2 className="projects-heading">Take a look at some of my projects</h2>
+            <p className="projects-para">Some are school projects, and some are real-life cases made for clients during my internship at a web agency in Eskilstuna</p>
           </div>
         </div>
         <div className="display-wrapper">
@@ -90,6 +94,10 @@ function CardSlider() {
               <div className="bottom">
                 <h2 className="display-title">{clickedCard.title}</h2>
                 <p className="display-desc">{clickedCard.description}</p>
+                <div className="link-container">
+                  <a className="display-link" href={clickedCard.preview} target="_blank">Check out this project</a>
+                  <a className="display-link" href={clickedCard.code} target="_blank">See the code</a>                 
+                </div>
               </div>
             </div>
           )}
