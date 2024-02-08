@@ -18,6 +18,9 @@ function HeroSection() {
 
   return (
     <div className="hero-wrapper">
+      <div className="right-bg-cover">
+        <div className="right-bg-cover-inner"></div>
+      </div>
       <div className="hero-content">
         <div className="left">
           <div className="heading">

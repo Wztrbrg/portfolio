@@ -16,9 +16,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2000;
 
   .top-nav.hidden {
     width: 100%;
+    max-width: 1920px;
     padding: 24px 40px;
     display: flex;
     justify-content: space-between;
@@ -47,22 +49,28 @@
   left: 0;
   width: 100%;
   min-height: 60px;
-  background-color: $offwhite;
+  background-color: $nearblack;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2000;
 
   .top-nav.visible {
     width: 100%;
+    max-width: 1920px;
     padding: 8px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    .nav-logo {
+      color: $offwhite;
+    }
+
     .nav-item.visible {
       padding: 0 16px;
       font-weight: 700;
-      color: $nearblack;
+      color: $offwhite;
     }
 
     .nav-btn.visible {
@@ -71,8 +79,8 @@
       height: 60px;
       border: none;
       border-radius: 200px;
-      color: $offwhite;
-      background-color: $purple;
+      color: $nearblack;
+      background-color: $accent;
       font-size: 16px;
       font-weight: 600;
     }
