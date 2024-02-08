@@ -1,7 +1,7 @@
 import "../assets/style/components/HeroSection.scss";
 import React, { useState, useEffect } from "react";
 
-function HeroSection() {
+function HeroSection({ heroRef, projectsRef }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <div className="hero-wrapper">
+    <div ref={heroRef} className="hero-wrapper">
       <div className="right-bg-cover">
         <div className="right-bg-cover-inner"></div>
       </div>
@@ -33,7 +33,7 @@ function HeroSection() {
             </div>
           </div>
         </div>
-        <div className="right"></div>
+        <div ref={projectsRef} className="right"></div>
       </div>
     </div>
   )

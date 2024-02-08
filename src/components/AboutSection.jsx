@@ -1,10 +1,10 @@
 import "../assets/style/components/AboutSection.scss";
 import React, { useState, useEffect } from "react";
 
-function AboutSection() {
+function AboutSection({ aboutRef }) {
   
   return (
-    <div className="about-wrapper">
+    <div ref={aboutRef} className="about-wrapper">
       <div className="left"></div>
       <div className="right">
         <h2 className="about-heading">Who the heck am I ?!</h2>
