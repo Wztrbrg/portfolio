@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index: 5000000;
 
   .top-nav.hidden {
     width: 100%;
@@ -27,13 +27,20 @@
     align-items: center;
 
     .nav-logo {
-      color: $offwhite;
+      background: none;
+      border: none;
+
+      h2 {
+        color: $offwhite;
+      }
     }
 
     .nav-item.hidden {
       padding: 0 16px;
       font-weight: 700;
       color: $offwhite;
+      background: none;
+      border: none;
     }
 
     .nav-btn.hidden {
@@ -53,7 +60,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index: 5000000;
 
   .top-nav.visible {
     width: 100%;
@@ -65,12 +72,20 @@
 
     .nav-logo {
       color: $offwhite;
+      background: none;
+      border: none;
+
+      h2 {
+        color: $offwhite;
+      }
     }
 
     .nav-item.visible {
       padding: 0 16px;
       font-weight: 700;
       color: $offwhite;
+      background: none;
+      border: none;
     }
 
     .nav-btn.visible {

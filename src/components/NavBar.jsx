@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom"
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../assets/style/components/NavBar.scss";
 
-function NavBar() {
+function NavBar({ scrollToHero, scrollToProjects, scrollToAbout }) {
   const [isScrolled, setIsScrolled] = useState(false);
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,10 +22,10 @@ function NavBar() {
     <header className={ isScrolled ? "top-nav-header visible" : "top-nav-header hidden" }>
     
       <nav className={isScrolled ? "top-nav visible" : "top-nav hidden" }>
-        <Link to={"/"}><h2 className="nav-logo">Jonathan's</h2></Link>
+        <button onClick={scrollToHero} className="nav-logo"><h2>Jonathan's</h2></button>
         <ul>
-          <Link to={"/about"} className={isScrolled ? "nav-item visible" : "nav-item hidden" }>Om mig</Link>
-          <Link to={"/projects"} className={isScrolled ? "nav-item visible" : "nav-item hidden" }>Mina projekt</Link>
+          <button onClick={scrollToProjects} className={isScrolled ? "nav-item visible" : "nav-item hidden" }>Mina projekt</button>
+          <button onClick={scrollToAbout} className={isScrolled ? "nav-item visible" : "nav-item hidden" }>Om mig</button>
           <button className={isScrolled ? "nav-btn visible" : "nav-btn hidden" }>Kontakta mig</button>
         </ul>
       </nav>

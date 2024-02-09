@@ -10,7 +10,7 @@ import sKristjan from "../assets/images/kristjan-preview.png";
 import lKristjan from "../assets/images/kristjan-large.png";
 import { useEffect, useState } from "react";
 
-function CardSlider() {
+function CardSlider({ projectsRef }) {
   const cards = [
     {
       id: 1,
@@ -64,7 +64,7 @@ function CardSlider() {
 
   return (
     <>
-      <div className="project-content">
+      <div ref={projectsRef} className="project-content">
         <div className="left">
           <div className="card-wrapper">
             {
