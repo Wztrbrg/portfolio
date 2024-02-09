@@ -15,7 +15,7 @@ function Home() {
   };
 
   const scrollToProjects = () => {
-    projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' });
+    projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
   };
 
   const scrollToAbout = () => {
@@ -30,7 +30,7 @@ function Home() {
           scrollToProjects={scrollToProjects}
           scrollToAbout={scrollToAbout}
         />
-        <HeroSection heroRef={heroRef} />
+        <HeroSection scrollToProjects={scrollToProjects} projectsRef={projectsRef} heroRef={heroRef} />
         <ProjectSection projectsRef={projectsRef} />
         <AboutSection aboutRef={aboutRef} />
       </div>
