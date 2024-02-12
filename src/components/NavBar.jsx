@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 import React, { useState, useEffect, useRef } from "react";
 import "../assets/style/components/NavBar.scss";
 
-function NavBar({ scrollToHero, scrollToProjects, scrollToAbout }) {
+function NavBar({ scrollToHero, scrollToProjects, scrollToAbout, scrollToContact }) {
   const [isScrolled, setIsScrolled] = useState(false);
   
 
@@ -26,7 +26,7 @@ function NavBar({ scrollToHero, scrollToProjects, scrollToAbout }) {
         <ul>
           <button onClick={scrollToProjects} className={isScrolled ? "nav-item visible" : "nav-item hidden" }>Mina projekt</button>
           <button onClick={scrollToAbout} className={isScrolled ? "nav-item visible" : "nav-item hidden" }>Om mig</button>
-          <button className={isScrolled ? "nav-btn visible" : "nav-btn hidden" }>Kontakta mig</button>
+          <button onClick={scrollToContact} className={isScrolled ? "nav-btn visible" : "nav-btn hidden" }>Kontakta mig</button>
         </ul>
       </nav>
     </header>

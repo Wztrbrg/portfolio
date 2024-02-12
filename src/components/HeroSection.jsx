@@ -1,7 +1,7 @@
 import "../assets/style/components/HeroSection.scss";
 import React, { useState, useEffect } from "react";
 
-function HeroSection({ scrollToProjects, heroRef, projectsRef }) {
+function HeroSection({ scrollToContact, scrollToProjects, contactRef, heroRef, projectsRef }) {
   const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function HeroSection({ scrollToProjects, heroRef, projectsRef }) {
             <h2 className="hero-heading">Full-Stack Developer</h2>
             <div className="btn-container">
               <button onClick={scrollToProjects} className="sec-btn">&darr;</button>
-              <button className={isScrolled ? "prim-btn hidden" : "prim-btn visible" }>Kontakta mig</button>
+              <button onClick={scrollToContact} className={isScrolled ? "prim-btn hidden" : "prim-btn visible" }>Kontakta mig</button>
             </div>
           </div>
         </div>
