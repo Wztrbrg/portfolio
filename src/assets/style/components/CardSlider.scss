@@ -29,7 +29,7 @@
       gap: 28px;
 
       .projects-heading {
-        font-size: 58px;
+        font-size: $large-heading;
         font-weight: 400;
         line-height: 56px;
         letter-spacing: -1.2px;
@@ -37,7 +37,7 @@
       }
 
       .projects-para {
-        font-size: 20px;
+        font-size: $large-para;
         font-weight: 200;
         line-height: 30px;
         letter-spacing: 1px;
@@ -229,6 +229,86 @@
             border-radius: 24px;
             object-fit: cover;
             object-position: left;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 892px) {
+  .project-content {
+    height: 100%;
+    .left {
+      .projects-header {
+        height: 250px;
+        .projects-heading {
+          font-size: $small-heading;
+          line-height: 40px;
+        }
+
+        .projects-para {
+          font-size: $small-para;
+          line-height: 22px;
+        }
+      }
+      .card-wrapper {
+        height: 100%;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+
+        .card {
+          min-height: 250px;
+          width: 250px;
+          flex: 0 0 auto;
+          scroll-snap-align: start;
+        }
+
+        .card:hover {
+          width: 250px;
+        }
+      }
+    }
+    .display-wrapper {
+      height: 100%;
+      min-height: initial;
+
+      .display-card {
+        flex-direction: column;
+        height: 100%;
+        min-height: initial;
+        background-color: $secondary;
+        padding: 0;
+
+        .top {
+          height: 250px;
+          width: 100%;
+          padding: 0;
+          min-height: initial;
+          border-radius: 0;
+          padding: 8px;
+
+          img {
+            width: 100%;
+            height: 100%;
+            min-height: initial;
+            min-width: initial;
+            object-position: top left;
+            box-shadow: none;
+            border: none;
+            border-radius: 24px;
+            border: 6px solid $nearblack;
+          }
+        }
+
+        .bottom {
+          height: 60%;
+          min-height: initial;
+          background-color: $secondary;
+
+          .display-desc {
+            margin-bottom: 56px;
           }
         }
       }

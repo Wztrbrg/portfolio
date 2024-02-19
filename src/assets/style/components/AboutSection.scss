@@ -46,7 +46,7 @@
       gap: 28px;
 
       .about-heading {
-        font-size: 58px;
+        font-size: $large-heading;
         font-weight: 400;
         line-height: 56px;
         letter-spacing: -1.2px;
@@ -54,7 +54,7 @@
       }
 
       .about-para {
-        font-size: 20px;
+        font-size: $large-para;
         font-weight: 200;
         line-height: 30px;
         letter-spacing: 1px;
@@ -76,7 +76,7 @@
     gap: 28px;
 
     .testimonial-heading {
-      font-size: 58px;
+      font-size: $large-heading;
       font-weight: 400;
       line-height: 56px;
       letter-spacing: -1.2px;
@@ -149,6 +149,89 @@
             color: $nearblack;
             opacity: 1;
             margin-top: 16px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1014px) {
+  .about-wrapper {
+    .top {
+      height: 100%;
+    }
+    .bottom {
+      height: 100%;
+      #main-slider-container {
+        width: 100%;
+
+        .slider-icon.left,
+        .slider-icon.right {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 892px) {
+  .about-wrapper {
+    height: 100%;
+    .top {
+      flex-direction: column;
+      .left {
+        width: 100%;
+        min-height: 300px;
+        background-position: bottom;
+      }
+
+      .right {
+        width: 100%;
+
+        .about-heading {
+          font-size: $small-heading;
+          line-height: 40px;
+        }
+
+        .about-para {
+          font-size: $small-para;
+          line-height: 22px;
+        }
+      }
+    }
+
+    .bottom {
+      height: 500px;
+      .testimonial-heading {
+        font-size: $small-heading;
+        line-height: 40px;
+      }
+
+      #main-slider-container {
+        height: 100%;
+        #slider {
+          height: 100%;
+          display: flex;
+          .slider-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px;
+            gap: 8px;
+            height: 250px;
+
+            .slider-card-image {
+              position: initial;
+            }
+
+            .slider-card-title {
+              margin: 0;
+            }
+
+            .slider-card-description {
+              margin: 0;
+            }
           }
         }
       }
