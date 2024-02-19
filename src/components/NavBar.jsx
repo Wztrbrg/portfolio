@@ -51,7 +51,7 @@ function NavBar({ scrollToHero, scrollToProjects, scrollToAbout, scrollToContact
             </ul>
           )}
           {isMobile && (
-            <div className="menu-btn" onClick={handleMenuClick}>
+            <div className={!isOpen ? "menu-btn" : "menu-btn close" } onClick={handleMenuClick}>
               <div className="menu-line"></div>
               <div className="menu-line"></div>
               <div className="menu-line"></div>
