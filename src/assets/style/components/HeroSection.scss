@@ -105,6 +105,45 @@
       background-size: contain;
       background-repeat: no-repeat;
       background-position: center;
+      opacity: 0.6;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .hero-wrapper {
+    height: 70vh;
+    min-height: none;
+    overflow: hidden;
+
+    .right-bg-cover {
+      display: none;
+
+      .right-bg-cover-inner {
+        display: none;
+      }
+    }
+
+    .hero-content {
+      padding: 0;
+
+      .left {
+        width: 100%;
+        z-index: 200;
+
+        .heading {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      .right {
+        // display: none;
+        position: absolute;
+        bottom: -188px;
+        right: 0;
+      }
     }
   }
 }
