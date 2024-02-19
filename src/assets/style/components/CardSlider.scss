@@ -241,7 +241,7 @@
     height: 100%;
     .left {
       .projects-header {
-        height: 250px;
+        min-height: 300px;
         .projects-heading {
           font-size: $small-heading;
           line-height: 40px;
