@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/portfolio/static/css/main.e3f9ccb6.css",
+    "main.js": "/portfolio/static/js/main.79acaa77.js",
+    "static/media/lego-preview.png": "/portfolio/static/media/lego-preview.5904101c362c3a23d430.png",
+    "static/media/kristjan-large.png": "/portfolio/static/media/kristjan-large.bfc9d73531a83c42089a.png",
+    "static/media/bookster-preview.png": "/portfolio/static/media/bookster-preview.8021992c4fab584c21a4.png",
+    "static/media/fredags-preview.png": "/portfolio/static/media/fredags-preview.d7616fbfe591b797b0a5.png",
+    "static/media/fredags-large.png": "/portfolio/static/media/fredags-large.4527f69305c766af5d4d.png",
+    "static/media/kristjan-preview.png": "/portfolio/static/media/kristjan-preview.65df3094c1a43bdc2e66.png",
+    "static/media/10.svg": "/portfolio/static/media/10.0368039fec63bcfb0ed6.svg",
+    "static/media/19.png": "/portfolio/static/media/19.ce0ba58850c63f2ac4fd.png",
+    "static/media/lego-large.png": "/portfolio/static/media/lego-large.d95f99821dd900a8897b.png",
+    "static/media/contact-img.png": "/portfolio/static/media/contact-img.3a39f007af29ae1a7cc0.png",
+    "static/media/bookster-large.png": "/portfolio/static/media/bookster-large.07d3a33f0ae991c41116.png",
+    "static/media/User-03b.svg": "/portfolio/static/media/User-03b.b325539df60cd4aacfc7537ed7056d52.svg",
+    "static/media/User-07c.svg": "/portfolio/static/media/User-07c.eddcebdd0fa91069e8f15cc76da8f934.svg",
+    "static/media/User-02a.svg": "/portfolio/static/media/User-02a.d2dedc67c3399b011103394df6bdec9f.svg",
+    "index.html": "/portfolio/index.html",
+    "main.e3f9ccb6.css.map": "/portfolio/static/css/main.e3f9ccb6.css.map",
+    "main.79acaa77.js.map": "/portfolio/static/js/main.79acaa77.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3f9ccb6.css",
+    "static/js/main.79acaa77.js"
+  ]
+}
