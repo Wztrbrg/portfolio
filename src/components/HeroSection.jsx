@@ -29,7 +29,7 @@ function HeroSection({ scrollToContact, scrollToProjects, contactRef, heroRef, p
             <h2 className="hero-heading">Full-Stack Developer</h2>
             <div className="btn-container">
               <button onClick={scrollToProjects} className="sec-btn">&darr;</button>
-              <button onClick={scrollToContact} className={isScrolled ? "prim-btn hidden" : "prim-btn visible" }>Kontakta mig</button>
+              <button onClick={scrollToContact} className={isScrolled ? "prim-btn hidden" : "prim-btn visible" }>Contact me</button>
             </div>
           </div>
         </div>
