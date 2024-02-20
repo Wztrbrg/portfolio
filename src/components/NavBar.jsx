@@ -59,13 +59,15 @@ function NavBar({ scrollToHero, scrollToProjects, scrollToAbout, scrollToContact
           )}
         </nav>
       </header>
-      <nav className={isMobile ? `mobile-nav ${isOpen ? 'open' : ''}` : ''}>
-        <ul>
-          <button onClick={scrollToProjects} className="nav-item">My projects</button>
-          <button onClick={scrollToAbout} className="nav-item">About me</button>
-          <button onClick={scrollToContact} className="nav-btn">Contact me</button>
-        </ul>
-      </nav>
+      {isMobile && (
+        <nav className={isOpen ? 'mobile-nav open' : 'mobile-nav'}>
+          <ul>
+            <button onClick={scrollToProjects} className="nav-item">My projects</button>
+            <button onClick={scrollToAbout} className="nav-item">About me</button>
+            <button onClick={scrollToContact} className="nav-btn">Contact me</button>
+          </ul>
+        </nav>
+      )}
     </>
   )
 }
