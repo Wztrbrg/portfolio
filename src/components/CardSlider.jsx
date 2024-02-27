@@ -15,7 +15,7 @@ function CardSlider({ projectsRef }) {
     {
       id: 1,
       title: "Bookster",
-      description: "Bookster is a concept for a book store inventory management system. It is built with React.js, Express and MongoDB. This project was made for educational purpose during my studies designed to handle creating, updating and deleting information and also searching for specifik items.",
+      description: "Bookster is a concept for a book store inventory management system. It is built with React.js, Express and MongoDB. This project was made for educational purpose during my studies designed to handle creating, updating and deleting information and also searching for specific items.",
       preview: "https://wztrbrg.github.io/js3-exam/",
       code: "https://github.com/Wztrbrg/js3-exam",
       image: sBookster,
@@ -34,7 +34,8 @@ function CardSlider({ projectsRef }) {
       id: 3,
       title: "Fredagskollegiet",
       description: "Fredagskollegiet is a single-page website that is built on WordPress with Elementor PRO and utilizes the Bedrock boilerplate with Deployer. This project is for a real client and was made during my internship.",
-      preview: "#",
+      preview: "",
+      code: "",
       image: sFredag,
       large: lFredag,
     },
@@ -42,7 +43,8 @@ function CardSlider({ projectsRef }) {
       id: 4,
       title: "Kristjan Andresson",
       description: "Kristjanandresson is a single-page website that is built on WordPress with Elementor PRO and utilizes the Bedrock boilerplate with Deployer. This project is for a real client and was made during my internship.",
-      preview: "#",
+      preview: "",
+      code: "",
       image: sKristjan,
       large: lKristjan,
     },
@@ -50,6 +52,8 @@ function CardSlider({ projectsRef }) {
       id: 5,
       title: "Card Title5",
       description: "A simple calculator made with JavaScript.",
+      preview: "",
+      code: "",
       image: sBookster,
     },
   ]
@@ -96,7 +100,9 @@ function CardSlider({ projectsRef }) {
                 <p className="display-desc">{clickedCard.description}</p>
                 <div className="link-container">
                   <a className="display-link" href={clickedCard.preview} target="_blank">Check out this project</a>
-                  <a className="display-link" href={clickedCard.code} target="_blank">See the code</a>                 
+                  {clickedCard.code != "" && 
+                    <a className="display-link" href={clickedCard.code} target="_blank">See the code</a>                 
+                  }
                 </div>
               </div>
             </div>

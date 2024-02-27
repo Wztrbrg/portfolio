@@ -3,7 +3,7 @@
 
 .contact-wrapper {
   width: 100%;
-  max-width: 1920px;
+  max-width: $max-desk-w;
   height: calc(60vh - 90px);
   min-height: 670px;
   display: flex;

@@ -7,7 +7,7 @@
 .project-content {
   display: flex;
   width: 100%;
-  max-width: 1920px;
+  max-width: $max-desk-w;
 
   .left {
     width: 65%;

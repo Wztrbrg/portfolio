@@ -4,7 +4,7 @@
 .hero-wrapper {
   position: relative;
   width: 100%;
-  max-width: 1920px;
+  max-width: $max-desk-w;
   height: 80vh;
   min-height: 740px;
   background-color: $purple;
