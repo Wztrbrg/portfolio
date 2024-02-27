@@ -20,7 +20,7 @@
 
   .top-nav.hidden {
     width: 100%;
-    max-width: 1920px;
+    max-width: $max-desk-w;
     padding: 24px 40px;
     display: flex;
     justify-content: space-between;
