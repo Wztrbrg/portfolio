@@ -8,21 +8,14 @@ import sFredag from "../assets/images/fredags-preview.png";
 import lFredag from "../assets/images/fredags-large.png";
 import sKristjan from "../assets/images/kristjan-preview.png";
 import lKristjan from "../assets/images/kristjan-large.png";
+import sModerat from "../assets/images/emoderaterna-preview.png";
+import lModerat from "../assets/images/emoderaterna-large.png";
 import { useEffect, useState } from "react";
 
 function CardSlider({ projectsRef }) {
   const cards = [
     {
       id: 1,
-      title: "Bookster",
-      description: "Bookster is a concept for a book store inventory management system. It is built with React.js, Express and MongoDB. This project was made for educational purpose during my studies designed to handle creating, updating and deleting information and also searching for specific items.",
-      preview: "https://wztrbrg.github.io/js3-exam/",
-      code: "https://github.com/Wztrbrg/js3-exam",
-      image: sBookster,
-      large: lBookster,
-    },
-    {
-      id: 2,
       title: "Brick Canvas",
       description: "Brick Canvas is a service where a user can upload their image, edit it and turn it into a Lego-like mosaic. The service is built with React.js and uses Canvas for the image editing and processing.",
       preview: "https://wztrbrg.github.io/brick-canvas/",
@@ -31,7 +24,25 @@ function CardSlider({ projectsRef }) {
       large: lLego,
     },
     {
+      id: 2,
+      title: "Bookster",
+      description: "Bookster is a concept for a book store inventory management system. It is built with React.js, Express and MongoDB. This project was made for educational purpose during my studies designed to handle creating, updating and deleting information and also searching for specific items.",
+      preview: "https://wztrbrg.github.io/js3-exam/",
+      code: "https://github.com/Wztrbrg/js3-exam",
+      image: sBookster,
+      large: lBookster,
+    },
+    {
       id: 3,
+      title: "Eskilstunamoderaterna",
+      description: "Eskilstunamoderaterna is a website that is built on WordPress with Elementor PRO and utilizes the Bedrock boilerplate with Deployer. This project is for a real client and was made during my internship.",
+      preview: "",
+      code: "",
+      image: sModerat,
+      large: lModerat,
+    },
+    {
+      id: 4,
       title: "Fredagskollegiet",
       description: "Fredagskollegiet is a single-page website that is built on WordPress with Elementor PRO and utilizes the Bedrock boilerplate with Deployer. This project is for a real client and was made during my internship.",
       preview: "",
@@ -40,21 +51,13 @@ function CardSlider({ projectsRef }) {
       large: lFredag,
     },
     {
-      id: 4,
+      id: 5,
       title: "Kristjan Andresson",
       description: "Kristjanandresson is a single-page website that is built on WordPress with Elementor PRO and utilizes the Bedrock boilerplate with Deployer. This project is for a real client and was made during my internship.",
       preview: "",
       code: "",
       image: sKristjan,
       large: lKristjan,
-    },
-    {
-      id: 5,
-      title: "Card Title5",
-      description: "A simple calculator made with JavaScript.",
-      preview: "",
-      code: "",
-      image: sBookster,
     },
   ]
 
