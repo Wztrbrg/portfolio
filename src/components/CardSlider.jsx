@@ -102,7 +102,9 @@ function CardSlider({ projectsRef }) {
                 <h2 className="display-title">{clickedCard.title}</h2>
                 <p className="display-desc">{clickedCard.description}</p>
                 <div className="link-container">
-                  <a className="display-link" href={clickedCard.preview} target="_blank">Check out this project</a>
+                  {clickedCard.preview != "" &&
+                    <a className="display-link" href={clickedCard.preview} target="_blank">Check out this project</a>
+                  }
                   {clickedCard.code != "" && 
                     <a className="display-link" href={clickedCard.code} target="_blank">See the code</a>                 
                   }
