@@ -251,6 +251,34 @@
 
     .left {
       height: 100%;
+
+      .temporary-contact-info {
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 28px;
+
+        .contact-heading {
+          font-size: $small-heading;
+          line-height: 40px;
+        }
+
+        .contact-para {
+          font-size: $small-para;
+          line-height: 22px;
+        }
+
+        .contact-links {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+          .contact-para-temporary {
+            font-size: $small-para;
+            line-height: 22px;
+          }
+        }
+      }
     }
   }
 }
