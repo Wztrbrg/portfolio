@@ -108,8 +108,8 @@
         padding: 8px;
         width: 50px;
         height: 50px;
-        border: 4px solid $nearblack;
-        box-shadow: 4px 4px $nearblack;
+        // border: 4px solid $nearblack;
+        // box-shadow: 4px 4px $nearblack;
       }
       #slider {
         width: 100%;
@@ -120,9 +120,9 @@
           background-color: $offwhite;
           position: relative;
           height: 95%;
-          box-shadow: 4px 4px $nearblack;
+          box-shadow: none;
           border-radius: 24px;
-          border: 4px solid $nearblack;
+          // border: 4px solid $nearblack;
           scroll-snap-align: start;
           padding: 8px;
 

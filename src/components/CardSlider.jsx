@@ -21,7 +21,7 @@ function CardSlider({ projectsRef }) {
       preview: "https://wztrbrg.github.io/brick-canvas/",
       code: "https://github.com/Wztrbrg/brick-canvas",
       image: sLego,
-      large: lLego,
+      large: sLego,
     },
     {
       id: 2,
