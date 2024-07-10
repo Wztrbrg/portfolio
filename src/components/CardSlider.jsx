@@ -50,15 +50,15 @@ function CardSlider({ projectsRef }) {
       image: sFredag,
       large: lFredag,
     },
-    {
-      id: 5,
-      title: "Kristjan Andresson",
-      description: "Kristjanandresson is a single-page website that is built on WordPress with Elementor PRO and utilizes the Bedrock boilerplate with Deployer. This project is for a real client and was made during my internship.",
-      preview: "",
-      code: "",
-      image: sKristjan,
-      large: lKristjan,
-    },
+    // {
+    //   id: 5,
+    //   title: "Kristjan Andresson",
+    //   description: "Kristjanandresson is a single-page website that is built on WordPress with Elementor PRO and utilizes the Bedrock boilerplate with Deployer. This project is for a real client and was made during my internship.",
+    //   preview: "",
+    //   code: "",
+    //   image: sKristjan,
+    //   large: lKristjan,
+    // },
   ]
 
   const [clickedCard, setClickedCard] = useState(cards[0]);
@@ -72,7 +72,10 @@ function CardSlider({ projectsRef }) {
   return (
     <>
       <div ref={projectsRef} className="project-content">
-        <div className="left">
+          <div className="projects-header">
+            <h2 className="projects-heading">Take a look at some of my projects</h2>
+            <p className="projects-para">Some are school projects, and some are real-life cases made for clients during my internship at a web agency in Eskilstuna</p>
+          </div>
           <div className="card-wrapper">
             {
               cards.map((card) => 
@@ -84,12 +87,7 @@ function CardSlider({ projectsRef }) {
               )
             }
           </div>
-          <div className="projects-header">
-            <h2 className="projects-heading">Take a look at some of my projects</h2>
-            <p className="projects-para">Some are school projects, and some are real-life cases made for clients during my internship at a web agency in Eskilstuna</p>
-          </div>
-        </div>
-        <div className="display-wrapper">
+        {/* <div className="display-wrapper">
           <div className="left-bg-cover">
             <div className="left-bg-cover-inner"></div>
           </div>
@@ -112,7 +110,7 @@ function CardSlider({ projectsRef }) {
               </div>
             </div>
           )}
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -42,7 +42,7 @@ function NavBar({ scrollToHero, scrollToProjects, scrollToAbout, scrollToContact
     <>
       <header className={isScrolled ? "top-nav-header visible" : "top-nav-header hidden"}>
         <nav className={isScrolled ? "top-nav visible" : "top-nav hidden"}>
-          <button onClick={scrollToHero} className="nav-logo"><h2>Jonathan's</h2></button>
+          <button onClick={scrollToHero} className="nav-logo"><h2>Jonathans</h2></button>
           {!isMobile && (
             <ul>
               <button onClick={scrollToProjects} className={isScrolled ? "nav-item visible" : "nav-item hidden"}>My projects</button>

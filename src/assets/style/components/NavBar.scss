@@ -31,14 +31,14 @@
       border: none;
 
       h2 {
-        color: $offwhite;
+        color: $light-text;
       }
     }
 
     .nav-item.hidden {
       padding: 0 16px;
       font-weight: 700;
-      color: $offwhite;
+      color: $light-text;
       background: none;
       border: none;
     }
@@ -72,19 +72,19 @@
     align-items: center;
 
     .nav-logo {
-      color: $offwhite;
+      color: $light-text;
       background: none;
       border: none;
 
       h2 {
-        color: $offwhite;
+        color: $light-text;
       }
     }
 
     .nav-item.visible {
       padding: 0 16px;
       font-weight: 700;
-      color: $offwhite;
+      color: $light-text;
       background: none;
       border: none;
     }
@@ -175,7 +175,7 @@
         font-size: $small-heading;
         font-weight: 200;
         background: none;
-        color: $offwhite;
+        color: $light-text;
         border: none;
         padding: 24px 0;
         border-bottom: 1px solid $offwhite;
@@ -206,7 +206,7 @@
     z-index: 200;
 
     h2 {
-      color: $offwhite;
+      color: $light-text;
     }
   }
 }

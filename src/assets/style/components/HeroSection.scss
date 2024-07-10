@@ -7,27 +7,35 @@
   max-width: $max-desk-w;
   height: 80vh;
   min-height: 740px;
-  background-color: $purple;
+  // background-color: $purple;
   border-radius: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
+  // overflow: hidden;
 
-  .right-bg-cover {
+  .bg-blur-ball-right {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: $purple;
+    opacity: 0.1;
+    filter: blur(100px);
     position: absolute;
-    bottom: 80px;
+    bottom: 0;
     right: 0;
-    width: 50px;
-    height: 100px;
-    padding-bottom: 28px;
-    background-color: $nearblack;
+  }
 
-    .right-bg-cover-inner {
-      width: 100%;
-      height: 100%;
-      background-color: $purple;
-      border-radius: 0 0 32px 0;
-    }
+  .bg-blur-ball-left {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: $accent;
+    opacity: 0.1;
+    filter: blur(100px);
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .hero-content {
@@ -37,69 +45,75 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 42px;
+    // padding: 42px;
+    z-index: 4;
 
-    .left {
-      width: 70%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    .heading {
+      width: 100%;
+      max-width: 1000px;
+      .hero-heading,
+      .hero-heading span {
+        font-family: $secondfont;
+        font-size: 68px;
+        font-weight: 500;
+        letter-spacing: -3px;
+        line-height: 72px;
+        text-align: center;
+      }
+      .hero-heading {
+        color: $light-text;
 
-      .heading {
-        .hero-heading,
-        .hero-heading span {
-          font-family: $mainfont;
-          font-size: 68px;
+        span {
+          color: $accent;
+        }
+      }
+
+      .btn-container {
+        margin-top: 36px;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+
+        .prim-btn {
+          opacity: 0;
+          height: 60px;
+          width: 200px;
+          scale: 0;
+          border: none;
+          border-radius: 200px;
+          color: $nearblack;
+          background-color: $accent;
+          font-size: 18px;
           font-weight: 500;
-          letter-spacing: -3px;
-          line-height: 72px;
-        }
-        .hero-heading {
-          color: $offwhite;
-
-          span {
-            color: $accent;
-          }
+          transition: opacity 0.3s ease, scale 0.3s ease;
         }
 
-        .btn-container {
-          margin-top: 36px;
-          display: flex;
-          gap: 8px;
+        .prim-btn.visible:hover {
+          scale: 1.15;
+          cursor: pointer;
+        }
 
-          .prim-btn {
-            opacity: 0;
-            height: 60px;
-            width: 200px;
-            scale: 0;
-            border: none;
-            border-radius: 200px;
-            color: $nearblack;
-            background-color: $accent;
-            font-size: 18px;
-            font-weight: 500;
-            transition: opacity 0.3s ease, scale 0.3s ease;
-          }
+        .prim-btn.visible {
+          opacity: 1;
+          scale: 1;
+        }
 
-          .prim-btn.visible:hover {
-            scale: 1.15;
-            cursor: pointer;
-          }
-
-          .prim-btn.visible {
-            opacity: 1;
-            scale: 1;
-          }
-
-          .prim-btn.hidden {
-            opacity: 0;
-            scale: 0;
-          }
+        .prim-btn.hidden {
+          opacity: 0;
+          scale: 0;
         }
       }
     }
+
+    // .left {
+    //   width: 70%;
+    //   height: 100%;
+    //   display: flex;
+    //   flex-direction: column;
+    //   justify-content: center;
+    //   align-items: center;
+
+    // }
 
     .right {
       width: 50%;
@@ -113,57 +127,56 @@
   }
 }
 
-@media screen and (max-width: 1300px) {
-  .hero-wrapper {
-    height: 70vh;
-    min-height: none;
-    overflow: hidden;
+// @media screen and (max-width: 1300px) {
+//   .hero-wrapper {
+//     height: 80vh;
+//     min-height: none;
+//     overflow: hidden;
 
-    .right-bg-cover {
-      display: none;
+//     .right-bg-cover {
+//       display: none;
 
-      .right-bg-cover-inner {
-        display: none;
-      }
-    }
+//       .right-bg-cover-inner {
+//         display: none;
+//       }
+//     }
 
-    .hero-content {
-      padding: 0;
+//     .hero-content {
+//       padding: 0;
 
-      .left {
-        width: 100%;
-        z-index: 200;
-        padding: 42px;
-        align-items: flex-start;
+//       .left {
+//         width: 100%;
+//         z-index: 200;
+//         padding: 42px;
+//         align-items: flex-start;
 
-        .heading {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          // align-items: center;
+//         .heading {
+//           display: flex;
+//           flex-direction: column;
+//           justify-content: center;
+//           // align-items: center;
 
-          .hero-heading,
-          .hero-heading span {
-            // text-align: center;
-          }
-        }
-      }
-      .right {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        bottom: -218px;
-        right: 0;
-        opacity: 0.3;
-      }
-    }
-  }
-}
+//           .hero-heading,
+//           .hero-heading span {
+//             // text-align: center;
+//           }
+//         }
+//       }
+//       .right {
+//         width: 100%;
+//         height: 100%;
+//         position: absolute;
+//         bottom: -218px;
+//         right: 0;
+//         opacity: 0.3;
+//       }
+//     }
+//   }
+// }
 
 @media screen and (max-width: 892px) {
   .hero-wrapper {
     height: 80vh;
-    min-height: initial;
 
     .hero-content {
       .left {
@@ -178,6 +191,16 @@
           }
         }
       }
+    }
+  }
+}
+
+@media screen and (max-width: 664px) {
+  .hero-wrapper {
+    .bg-blur-ball-left,
+    .bg-blur-ball-right {
+      width: 300px;
+      height: 300px;
     }
   }
 }

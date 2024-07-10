@@ -17,7 +17,7 @@ function Home() {
   };
 
   const scrollToProjects = () => {
-    projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'center', inline: 'nearest' });
+    projectsRef.current.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' });
   };
 
   const scrollToAbout = () => {

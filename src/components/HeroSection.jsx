@@ -18,23 +18,20 @@ function HeroSection({ scrollToContact, scrollToProjects, contactRef, heroRef, p
 
   return (
     <div ref={heroRef} className="hero-wrapper">
-      <div className="right-bg-cover">
-        <div className="right-bg-cover-inner"></div>
-      </div>
       <div className="hero-content">
-        <div className="left">
-          <div className="heading">
-            <h1 className="hero-heading">Hi! I'm <span>Jonathan</span></h1>
-            <h2 className="hero-heading">a Design Inspired</h2>
-            <h2 className="hero-heading">Full-Stack Developer</h2>
-            <div className="btn-container">
-              <button onClick={scrollToProjects} className="sec-btn">&darr;</button>
-              <button onClick={scrollToContact} className={isScrolled ? "prim-btn hidden" : "prim-btn visible" }>Contact me</button>
-            </div>
+        <div className="heading">
+          <h1 className="hero-heading">Hi! I'm <span>Jonathan</span>, a Design Inspired Full-Stack Developer</h1>
+          <div className="btn-container">
+            <button onClick={scrollToProjects} className="sec-btn">&darr;</button>
+            <button onClick={scrollToContact} className={isScrolled ? "prim-btn hidden" : "prim-btn visible" }>Contact me</button>
           </div>
         </div>
-        <div ref={projectsRef} className="right"></div>
+        {/* <div className="left">
+          <div ref={projectsRef} className="right"></div>
+        </div> */}
       </div>
+      <div className="bg-blur-ball-right"></div>
+      <div className="bg-blur-ball-left"></div>
     </div>
   )
 }
