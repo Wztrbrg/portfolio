@@ -232,11 +232,11 @@
         .right {
           width: 100%;
           .about-heading {
-            text-align: center;
+            // text-align: center;
           }
 
           .about-para {
-            text-align: center;
+            // text-align: center;
           }
         }
       }
@@ -244,22 +244,22 @@
 
     .bottom {
       .testimonial-heading {
-        text-align: center;
+        // text-align: center;
       }
 
       .testimonial-container {
         .testimonial-card {
           .testimonial-card-description {
-            text-align: center;
+            // text-align: center;
           }
 
           .person-container {
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
+            // flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-end;
 
             .person-text-container {
-              align-items: center;
+              align-items: start;
             }
           }
         }

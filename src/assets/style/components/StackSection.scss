@@ -94,6 +94,16 @@
   }
 }
 
+@media screen and (max-width: 948px) {
+  .stack-wrapper {
+    .stack-card-container {
+      .stack-card {
+        flex: 0 0 48%;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 970px) {
   .stack-wrapper {
     .stack-content {
@@ -106,6 +116,34 @@
         .stack-para {
           font-size: $small-para;
           line-height: 22px;
+        }
+      }
+
+      .stack-card-container {
+        .stack-card {
+          svg {
+            font-size: 24px;
+          }
+
+          .stack-card-title {
+            font-size: $small-para;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 664px) {
+  .stack-wrapper {
+    .stack-content {
+      .stack-header {
+        .stack-heading {
+          text-align: start;
+        }
+
+        .stack-para {
+          text-align: start;
         }
       }
 

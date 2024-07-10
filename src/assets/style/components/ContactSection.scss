@@ -119,10 +119,21 @@
 
 @media screen and (max-width: 664px) {
   .contact-wrapper {
+    .contact-header {
+      align-items: flex-start;
+      .contact-heading,
+      .contact-para {
+        text-align: start;
+      }
+    }
     .contact-links {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      width: 100%;
       .contact-card-purple,
       .contact-card-green {
         width: 100%;
+        height: 100px;
       }
     }
   }

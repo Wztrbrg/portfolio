@@ -104,91 +104,21 @@
         }
       }
     }
-
-    // .left {
-    //   width: 70%;
-    //   height: 100%;
-    //   display: flex;
-    //   flex-direction: column;
-    //   justify-content: center;
-    //   align-items: center;
-
-    // }
-
-    .right {
-      width: 50%;
-      height: 700px;
-      background-image: url("../../images/10.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.6;
-    }
   }
 }
-
-// @media screen and (max-width: 1300px) {
-//   .hero-wrapper {
-//     height: 80vh;
-//     min-height: none;
-//     overflow: hidden;
-
-//     .right-bg-cover {
-//       display: none;
-
-//       .right-bg-cover-inner {
-//         display: none;
-//       }
-//     }
-
-//     .hero-content {
-//       padding: 0;
-
-//       .left {
-//         width: 100%;
-//         z-index: 200;
-//         padding: 42px;
-//         align-items: flex-start;
-
-//         .heading {
-//           display: flex;
-//           flex-direction: column;
-//           justify-content: center;
-//           // align-items: center;
-
-//           .hero-heading,
-//           .hero-heading span {
-//             // text-align: center;
-//           }
-//         }
-//       }
-//       .right {
-//         width: 100%;
-//         height: 100%;
-//         position: absolute;
-//         bottom: -218px;
-//         right: 0;
-//         opacity: 0.3;
-//       }
-//     }
-//   }
-// }
 
 @media screen and (max-width: 892px) {
   .hero-wrapper {
     height: 80vh;
 
     .hero-content {
-      .left {
-        padding: 24px;
-
-        .heading {
-          padding: 16px;
-          .hero-heading,
-          .hero-heading span {
-            font-size: 10vmin;
-            line-height: 104%;
-          }
+      // padding: 24px;
+      .heading {
+        padding: 16px;
+        .hero-heading,
+        .hero-heading span {
+          font-size: 10vmin;
+          line-height: 104%;
         }
       }
     }
@@ -197,6 +127,18 @@
 
 @media screen and (max-width: 664px) {
   .hero-wrapper {
+    justify-content: flex-start;
+    .hero-content {
+      justify-content: flex-start;
+      .heading {
+        .hero-heading {
+          text-align: start;
+        }
+        .btn-container {
+          justify-content: flex-start;
+        }
+      }
+    }
     .bg-blur-ball-left,
     .bg-blur-ball-right {
       width: 300px;

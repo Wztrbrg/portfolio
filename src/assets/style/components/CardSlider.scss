@@ -176,6 +176,12 @@
 
 @media screen and (max-width: 664px) {
   .project-content {
+    .projects-header {
+      .projects-heading,
+      .projects-para {
+        text-align: start;
+      }
+    }
     .card-wrapper {
       width: 100%;
       gap: 28px;
