@@ -161,3 +161,18 @@
     }
   }
 }
+
+@media screen and (max-width: 498px) {
+  .stack-wrapper {
+    .stack-card-container {
+      // flex-wrap: nowrap;
+      // flex-direction: column;
+      .stack-card {
+        min-width: initial;
+        width: 44%;
+        // padding: 24px 0;
+        flex: initial;
+      }
+    }
+  }
+}
