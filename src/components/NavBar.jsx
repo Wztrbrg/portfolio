@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../assets/style/components/NavBar.scss";
 
-function NavBar({ scrollToHero, scrollToProjects, scrollToAbout, scrollToContact }) {
+function NavBar({ scrollToHero, scrollToStack, scrollToProjects, scrollToAbout, scrollToContact }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
@@ -45,7 +45,8 @@ function NavBar({ scrollToHero, scrollToProjects, scrollToAbout, scrollToContact
           <button onClick={scrollToHero} className="nav-logo"><h2>Jonathans</h2></button>
           {!isMobile && (
             <ul>
-              <button onClick={scrollToProjects} className={isScrolled ? "nav-item visible" : "nav-item hidden"}>My projects</button>
+              <button onClick={scrollToStack} className={isScrolled ? "nav-item visible" : "nav-item hidden"}>Stack</button>
+              <button onClick={scrollToProjects} className={isScrolled ? "nav-item visible" : "nav-item hidden"}>Projects</button>
               <button onClick={scrollToAbout} className={isScrolled ? "nav-item visible" : "nav-item hidden"}>About me</button>
               <button onClick={scrollToContact} className={isScrolled ? "nav-btn visible" : "nav-btn hidden"}>Contact me</button>
             </ul>
@@ -62,7 +63,8 @@ function NavBar({ scrollToHero, scrollToProjects, scrollToAbout, scrollToContact
       {isMobile && (
         <nav className={isOpen ? 'mobile-nav open' : 'mobile-nav'}>
           <ul>
-            <button onClick={scrollToProjects} className="nav-item">My projects</button>
+            <button onClick={scrollToStack} className="nav-item">Stack</button>
+            <button onClick={scrollToProjects} className="nav-item">Projects</button>
             <button onClick={scrollToAbout} className="nav-item">About me</button>
             <button onClick={scrollToContact} className="nav-btn">Contact me</button>
           </ul>
