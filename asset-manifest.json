@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.0945485d.css",
-    "main.js": "/portfolio/static/js/main.3e58f005.js",
+    "main.css": "/portfolio/static/css/main.76cf311e.css",
+    "main.js": "/portfolio/static/js/main.2baac1f6.js",
     "static/media/lego-preview.png": "/portfolio/static/media/lego-preview.5904101c362c3a23d430.png",
     "static/media/emoderaterna-preview.png": "/portfolio/static/media/emoderaterna-preview.d9c993d5e1ca49b0c92c.png",
     "static/media/emoderaterna-large.png": "/portfolio/static/media/emoderaterna-large.1a53db7ad313011fdb1b.png",
@@ -18,11 +18,11 @@
     "static/media/User-03b.svg": "/portfolio/static/media/User-03b.b325539df60cd4aacfc7537ed7056d52.svg",
     "static/media/User-07c.svg": "/portfolio/static/media/User-07c.eddcebdd0fa91069e8f15cc76da8f934.svg",
     "index.html": "/portfolio/index.html",
-    "main.0945485d.css.map": "/portfolio/static/css/main.0945485d.css.map",
-    "main.3e58f005.js.map": "/portfolio/static/js/main.3e58f005.js.map"
+    "main.76cf311e.css.map": "/portfolio/static/css/main.76cf311e.css.map",
+    "main.2baac1f6.js.map": "/portfolio/static/js/main.2baac1f6.js.map"
   },
   "entrypoints": [
-    "static/css/main.0945485d.css",
-    "static/js/main.3e58f005.js"
+    "static/css/main.76cf311e.css",
+    "static/js/main.2baac1f6.js"
   ]
 }
