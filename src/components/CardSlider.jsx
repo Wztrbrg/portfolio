@@ -61,12 +61,17 @@ function CardSlider({ projectsRef }) {
     // },
   ]
 
-  const [clickedCard, setClickedCard] = useState(cards[0]);
-  const [active, setActive] = useState(cards[0].id);
+  const [clickedCard, setClickedCard] = useState();
+  const [active, setActive] = useState();
 
   const handleCardClick = (card) => {
     setClickedCard(card);
     setActive(card.id);
+  }
+
+  const handleClose = () => {
+    setClickedCard(null);
+    setActive(null);
   }
 
   return (
@@ -86,31 +91,28 @@ function CardSlider({ projectsRef }) {
                   </div>
               )
             }
-          </div>
-        {/* <div className="display-wrapper">
-          <div className="left-bg-cover">
-            <div className="left-bg-cover-inner"></div>
-          </div>
-          {clickedCard && (
-            <div className="display-card">
-              <div className="top">
-                <img src={clickedCard.large} alt="" />
-              </div>
-              <div className="bottom">
-                <h2 className="display-title">{clickedCard.title}</h2>
-                <p className="display-desc">{clickedCard.description}</p>
-                <div className="link-container">
-                  {clickedCard.preview != "" &&
-                    <a className="display-link" href={clickedCard.preview} target="_blank">Check out this project</a>
-                  }
-                  {clickedCard.code != "" && 
-                    <a className="display-link" href={clickedCard.code} target="_blank">See the code</a>                 
-                  }
+              {clickedCard && (
+                <div className="display-wrapper" onClick={handleClose}>
+                  <div className="display-card">
+                    <div className="top">
+                      <img src={clickedCard.large} alt="" />
+                    </div>
+                    <div className="bottom">
+                      <h2 className="display-title">{clickedCard.title}</h2>
+                      <p className="display-desc">{clickedCard.description}</p>
+                      <div className="link-container">
+                        {clickedCard.preview != "" &&
+                          <a className="display-link" href={clickedCard.preview} target="_blank">Check out this project</a>
+                        }
+                        {clickedCard.code != "" && 
+                          <a className="display-link" href={clickedCard.code} target="_blank">See the code</a>                 
+                        }
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-          )}
-        </div> */}
+              )}
+          </div>
       </div>
     </>
   );
