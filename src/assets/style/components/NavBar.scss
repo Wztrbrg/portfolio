@@ -163,7 +163,7 @@
     bottom: 0;
     right: 0;
     transition: height 0.3s ease;
-    z-index: 700000;
+    z-index: 200;
 
     ul {
       display: flex;
@@ -203,7 +203,7 @@
     border: none;
     position: absolute;
     left: 28px;
-    z-index: 200;
+    z-index: 201;
 
     h2 {
       color: $light-text;

@@ -1,16 +1,13 @@
 import "../assets/style/components/CardSlider.scss";
 import "../assets/style/components/HeroSection.scss";
 import sBookster from "../assets/images/bookster-preview.png";
-import lBookster from "../assets/images/bookster-large.png";
 import sLego from "../assets/images/lego-preview.png";
-import lLego from "../assets/images/lego-large.png";
 import sFredag from "../assets/images/fredags-preview.png";
-import lFredag from "../assets/images/fredags-large.png";
-import sKristjan from "../assets/images/kristjan-preview.png";
-import lKristjan from "../assets/images/kristjan-large.png";
 import sModerat from "../assets/images/emoderaterna-preview.png";
-import lModerat from "../assets/images/emoderaterna-large.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faX } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from "react";
+
 
 function CardSlider({ projectsRef }) {
   const cards = [
@@ -21,7 +18,6 @@ function CardSlider({ projectsRef }) {
       preview: "https://wztrbrg.github.io/brick-canvas/",
       code: "https://github.com/Wztrbrg/brick-canvas",
       image: sLego,
-      large: sLego,
     },
     {
       id: 2,
@@ -30,7 +26,6 @@ function CardSlider({ projectsRef }) {
       preview: "https://wztrbrg.github.io/js3-exam/",
       code: "https://github.com/Wztrbrg/js3-exam",
       image: sBookster,
-      large: lBookster,
     },
     {
       id: 3,
@@ -39,7 +34,6 @@ function CardSlider({ projectsRef }) {
       preview: "",
       code: "",
       image: sModerat,
-      large: lModerat,
     },
     {
       id: 4,
@@ -48,17 +42,7 @@ function CardSlider({ projectsRef }) {
       preview: "",
       code: "",
       image: sFredag,
-      large: lFredag,
     },
-    // {
-    //   id: 5,
-    //   title: "Kristjan Andresson",
-    //   description: "Kristjanandresson is a single-page website that is built on WordPress with Elementor PRO and utilizes the Bedrock boilerplate with Deployer. This project is for a real client and was made during my internship.",
-    //   preview: "",
-    //   code: "",
-    //   image: sKristjan,
-    //   large: lKristjan,
-    // },
   ]
 
   const [clickedCard, setClickedCard] = useState();
@@ -85,13 +69,29 @@ function CardSlider({ projectsRef }) {
             {
               cards.map((card) => 
                   <div className={card.id == active ? "card active" : "card deactive"}>
-                    <div key={card.id} className="overlay" onClick={() => handleCardClick(card)}></div>
-                    <img className="card-img" src={card.image} />
-                    <h2 className="card-title">{card.title}</h2>
+                    <FontAwesomeIcon icon={faX} className="close" onClick={handleClose} />
+                    <div className="top" onClick={() => handleCardClick(card)}>
+                      <img className="card-img" src={card.image} />
+                    </div>
+                    <div className="bottom">
+                      <h2 className="display-title">{card.title}</h2>
+                      <p className="display-desc">{card.description}</p>
+                      <div className="link-container">
+                        {card.preview != "" &&
+                          <a className="display-link" href={card.preview} target="_blank">Demo</a>
+                        }
+                        {card.code != "" && 
+                          <a className="display-link" href={card.code} target="_blank">Code</a>                 
+                        }
+                        {card.preview == "" && card.code == "" &&
+                          <p className="display-no-link">Due to confidentiality there is no demo or code</p>
+                        }
+                      </div>
+                    </div>
                   </div>
               )
             }
-              {clickedCard && (
+              {/* {clickedCard && (
                 <div className="display-wrapper" onClick={handleClose}>
                   <div className="display-card">
                     <div className="top">
@@ -111,7 +111,7 @@ function CardSlider({ projectsRef }) {
                     </div>
                   </div>
                 </div>
-              )}
+              )} */}
           </div>
       </div>
     </>

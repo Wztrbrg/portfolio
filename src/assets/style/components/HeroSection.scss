@@ -117,7 +117,6 @@
         padding: 16px;
         .hero-heading,
         .hero-heading span {
-          font-size: 16vmin;
           line-height: 104%;
         }
       }
@@ -131,8 +130,10 @@
     .hero-content {
       justify-content: flex-start;
       .heading {
-        .hero-heading {
+        .hero-heading,
+        .hero-heading span {
           text-align: start;
+          font-size: 14vmin;
         }
         .btn-container {
           justify-content: flex-start;
