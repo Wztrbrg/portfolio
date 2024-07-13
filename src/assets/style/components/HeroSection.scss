@@ -5,14 +5,11 @@
   position: relative;
   width: 100%;
   max-width: $max-desk-w;
-  height: 80vh;
+  height: 100vh;
   min-height: 740px;
-  // background-color: $purple;
-  border-radius: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
-  // overflow: hidden;
 
   .bg-blur-ball-right {
     width: 500px;
@@ -51,6 +48,11 @@
     .heading {
       width: 100%;
       max-width: 1000px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+
       .hero-heading,
       .hero-heading span {
         font-family: $secondfont;
@@ -69,10 +71,11 @@
       }
 
       .btn-container {
-        margin-top: 36px;
+        // margin-top: 36px;
         display: flex;
         justify-content: center;
         gap: 8px;
+        overflow: hidden;
 
         .prim-btn {
           opacity: 0;
@@ -103,18 +106,36 @@
           scale: 0;
         }
       }
+
+      .drop-in-1 {
+        animation: drop-in 1s ease 200ms backwards;
+      }
+      .drop-in-2 {
+        animation: drop-in 1s ease 700ms backwards;
+      }
+
+      @keyframes drop-in {
+        from {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translate(0px);
+        }
+      }
     }
   }
 }
 
 @media screen and (max-width: 892px) {
   .hero-wrapper {
-    height: 80vh;
+    // height: 80vh;
 
     .hero-content {
-      // padding: 24px;
+      // padding: 16px;
       .heading {
-        padding: 16px;
+        // padding: 16px;
         .hero-heading,
         .hero-heading span {
           line-height: 104%;
