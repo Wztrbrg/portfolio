@@ -33,6 +33,10 @@
       h2 {
         color: $light-text;
       }
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .nav-item.hidden {
@@ -41,6 +45,10 @@
       color: $light-text;
       background: none;
       border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .nav-btn.hidden {
@@ -76,6 +84,10 @@
       background: none;
       border: none;
 
+      &:hover {
+        cursor: pointer;
+      }
+
       h2 {
         color: $light-text;
       }
@@ -87,6 +99,10 @@
       color: $light-text;
       background: none;
       border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .nav-btn.visible {

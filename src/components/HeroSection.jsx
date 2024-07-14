@@ -1,4 +1,5 @@
 import "../assets/style/components/HeroSection.scss";
+import CV from "../assets/documents/Jonathan-Andersson-CV.pdf";
 import React, { useState, useEffect } from "react";
 
 function HeroSection({ scrollToContact, scrollToStack, contactRef, heroRef, stackRef }) {
@@ -22,7 +23,9 @@ function HeroSection({ scrollToContact, scrollToStack, contactRef, heroRef, stac
         <div className="heading">
           <h1 className="hero-heading drop-in-1">Hi! I'm <span>Jonathan</span>, a Design Inspired Full-Stack Developer</h1>
           <div className="btn-container drop-in-2">
-            <button onClick={scrollToStack} className="sec-btn">&darr;</button>
+            <a href={CV} download="Jonathan-Andersson-CV">
+              <button className="sec-btn">Download CV</button>
+            </a>
             <button onClick={scrollToContact} className={isScrolled ? "prim-btn hidden" : "prim-btn visible" }>Contact me</button>
           </div>
         </div>

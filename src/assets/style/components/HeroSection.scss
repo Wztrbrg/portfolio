@@ -88,11 +88,12 @@
           background-color: $accent;
           font-size: 18px;
           font-weight: 500;
-          transition: opacity 0.3s ease, scale 0.3s ease;
+          transition: opacity 0.3s ease, background-color 0.3s ease,
+            scale 0.3s ease;
         }
 
         .prim-btn.visible:hover {
-          scale: 1.15;
+          background-color: #a9f1cb;
           cursor: pointer;
         }
 
@@ -104,6 +105,25 @@
         .prim-btn.hidden {
           opacity: 0;
           scale: 0;
+        }
+
+        .sec-btn {
+          width: 200px;
+          height: 60px;
+          border: none;
+          border-radius: 2000px;
+          color: $offwhite;
+          background: none;
+          border: 1px solid $offwhite;
+          font-size: 18px;
+          font-weight: 500;
+          transition: 0.3s ease;
+        }
+
+        .sec-btn:hover {
+          border: 1px solid $purple;
+          color: $purple;
+          cursor: pointer;
         }
       }
 

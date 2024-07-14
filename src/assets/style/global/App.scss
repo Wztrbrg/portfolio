@@ -22,20 +22,3 @@ body {
 div {
   scroll-margin-top: 100px;
 }
-
-.sec-btn {
-  width: 60px;
-  height: 60px;
-  border: none;
-  border-radius: 2000px;
-  color: $nearblack;
-  background-color: $offwhite;
-  font-size: 24px;
-  font-weight: 900;
-  transition: 0.3s ease;
-}
-
-.sec-btn:hover {
-  scale: 1.15;
-  cursor: pointer;
-}
