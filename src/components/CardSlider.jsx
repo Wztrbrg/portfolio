@@ -7,6 +7,7 @@ import sModerat from "../assets/images/emoderaterna-preview.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faX } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from "react";
+import AnimatedSection from "./AnimatedSection";
 
 
 function CardSlider({ projectsRef }) {
@@ -60,60 +61,41 @@ function CardSlider({ projectsRef }) {
 
   return (
     <>
-      <div ref={projectsRef} className="project-content">
-          <div className="projects-header">
-            <h2 className="projects-heading">Take a look at some of my projects</h2>
-            <p className="projects-para">Some are school projects, and some are real-life cases made for clients during my internship at a web agency in Eskilstuna</p>
-          </div>
-          <div className="card-wrapper">
-            {
-              cards.map((card) => 
-                  <div className={card.id == active ? "card active" : "card deactive"}>
-                    <FontAwesomeIcon icon={faX} className="close" onClick={handleClose} />
-                    <div className="top" onClick={() => handleCardClick(card)}>
-                      <img className="card-img" src={card.image} />
-                    </div>
-                    <div className="bottom">
-                      <h2 className="display-title">{card.title}</h2>
-                      <p className="display-desc">{card.description}</p>
-                      <div className="link-container">
-                        {card.preview != "" &&
-                          <a className="display-link" href={card.preview} target="_blank">Demo</a>
-                        }
-                        {card.code != "" && 
-                          <a className="display-link" href={card.code} target="_blank">Code</a>                 
-                        }
-                        {card.preview == "" && card.code == "" &&
-                          <p className="display-no-link">Due to confidentiality there is no demo or code</p>
-                        }
+      <AnimatedSection>
+        <div ref={projectsRef} className="project-content">
+            <div className="projects-header">
+              <h2 className="projects-heading">Take a look at some of my projects</h2>
+              <p className="projects-para">Some are school projects, and some are real-life cases made for clients during my internship at a web agency in Eskilstuna</p>
+            </div>
+            <div className="card-wrapper">
+              {
+                cards.map((card) => 
+                    <div className={card.id === active ? "card active" : "card deactive"}>
+                      <FontAwesomeIcon icon={faX} className="close" onClick={handleClose} />
+                      <div className="top" onClick={() => handleCardClick(card)}>
+                        <img className="card-img" src={card.image} />
+                      </div>
+                      <div className="bottom">
+                        <h2 className="display-title">{card.title}</h2>
+                        <p className="display-desc">{card.description}</p>
+                        <div className="link-container">
+                          {card.preview !== "" &&
+                            <a className="display-link" href={card.preview} target="_blank" rel="noreferrer">Demo</a>
+                          }
+                          {card.code != "" && 
+                            <a className="display-link" href={card.code} target="_blank" rel="noreferrer">Code</a>                 
+                          }
+                          {card.preview === "" && card.code === "" &&
+                            <p className="display-no-link">Due to confidentiality there is no demo or code</p>
+                          }
+                        </div>
                       </div>
                     </div>
-                  </div>
-              )
-            }
-              {/* {clickedCard && (
-                <div className="display-wrapper" onClick={handleClose}>
-                  <div className="display-card">
-                    <div className="top">
-                      <img src={clickedCard.large} alt="" />
-                    </div>
-                    <div className="bottom">
-                      <h2 className="display-title">{clickedCard.title}</h2>
-                      <p className="display-desc">{clickedCard.description}</p>
-                      <div className="link-container">
-                        {clickedCard.preview != "" &&
-                          <a className="display-link" href={clickedCard.preview} target="_blank">Check out this project</a>
-                        }
-                        {clickedCard.code != "" && 
-                          <a className="display-link" href={clickedCard.code} target="_blank">See the code</a>                 
-                        }
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )} */}
-          </div>
-      </div>
+                )
+              }
+            </div>
+        </div>
+      </AnimatedSection>
     </>
   );
 }

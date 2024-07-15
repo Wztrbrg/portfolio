@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import CV from "../assets/documents/Jonathan-Andersson-CV.pdf";
 import "../assets/style/components/NavBar.scss";
 
 function NavBar({ scrollToHero, scrollToStack, scrollToProjects, scrollToAbout, scrollToContact }) {
@@ -48,6 +48,7 @@ function NavBar({ scrollToHero, scrollToStack, scrollToProjects, scrollToAbout, 
               <button onClick={scrollToStack} className={isScrolled ? "nav-item visible" : "nav-item hidden"}>Stack</button>
               <button onClick={scrollToProjects} className={isScrolled ? "nav-item visible" : "nav-item hidden"}>Projects</button>
               <button onClick={scrollToAbout} className={isScrolled ? "nav-item visible" : "nav-item hidden"}>About me</button>
+              <a href={CV} download="Jonathan-Andersson-CV" className={isScrolled ? "nav-item visible link" : "nav-item hidden link"}>CV</a>
               <button onClick={scrollToContact} className={isScrolled ? "nav-btn visible" : "nav-btn hidden"}>Contact me</button>
             </ul>
           )}
@@ -66,6 +67,7 @@ function NavBar({ scrollToHero, scrollToStack, scrollToProjects, scrollToAbout, 
             <button onClick={scrollToStack} className="nav-item">Stack</button>
             <button onClick={scrollToProjects} className="nav-item">Projects</button>
             <button onClick={scrollToAbout} className="nav-item">About me</button>
+            <a href={CV} download="Jonathan-Andersson-CV" className={isScrolled ? "nav-item visible" : "nav-item hidden"}>CV</a>
             <button onClick={scrollToContact} className="nav-btn">Contact me</button>
           </ul>
         </nav>

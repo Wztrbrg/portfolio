@@ -165,7 +165,7 @@
 @media screen and (max-width: 498px) {
   .stack-wrapper {
     .stack-card-container {
-      // flex-wrap: nowrap;
+      flex-wrap: nowrap;
       // flex-direction: column;
       .stack-card {
         min-width: initial;

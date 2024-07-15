@@ -54,6 +54,10 @@
     .nav-btn.hidden {
       display: none;
     }
+
+    .nav-item.hidden.link {
+      font-size: 14px;
+    }
   }
 }
 
@@ -103,6 +107,10 @@
       &:hover {
         cursor: pointer;
       }
+    }
+
+    .nav-item.visible.link {
+      font-size: 14px;
     }
 
     .nav-btn.visible {

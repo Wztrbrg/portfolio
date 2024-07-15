@@ -178,6 +178,13 @@
         }
         .btn-container {
           justify-content: flex-start;
+          flex-direction: column-reverse;
+          gap: 16px;
+
+          .prim-btn,
+          .sec-btn {
+            width: 100%;
+          }
         }
       }
     }
