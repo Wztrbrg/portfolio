@@ -67,7 +67,7 @@ function NavBar({ scrollToHero, scrollToStack, scrollToProjects, scrollToAbout, 
             <button onClick={scrollToStack} className="nav-item">Stack</button>
             <button onClick={scrollToProjects} className="nav-item">Projects</button>
             <button onClick={scrollToAbout} className="nav-item">About me</button>
-            <a href={CV} download="Jonathan-Andersson-CV" className={isScrolled ? "nav-item visible" : "nav-item hidden"}>CV</a>
+            <a href={CV} download="Jonathan-Andersson-CV" className="nav-item link">CV</a>
             <button onClick={scrollToContact} className="nav-btn">Contact me</button>
           </ul>
         </nav>
