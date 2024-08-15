@@ -4,6 +4,7 @@ import sBookster from "../assets/images/bookster-preview.png";
 import sLego from "../assets/images/lego-preview.png";
 import sFredag from "../assets/images/fredags-preview.png";
 import sModerat from "../assets/images/emoderaterna-preview.png";
+import sBowling from "../assets/images/eskilstunabowling-preview.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faX } from '@fortawesome/free-solid-svg-icons';
 import { useEffect, useState } from "react";
@@ -22,17 +23,17 @@ function CardSlider({ projectsRef }) {
     },
     {
       id: 2,
-      title: "Bookster",
-      description: "Bookster is a concept for a book store inventory management system. It is built with React.js, Express and MongoDB. This project was made for educational purpose during my studies designed to handle creating, updating and deleting information and also searching for specific items.",
-      preview: "https://wztrbrg.github.io/js3-exam/",
+      title: "Eskilstuna Bowlingcenter",
+      description: "During my internship I got the chance to update the website for Eskilstuna Bowlingcenter. At first I worked alone but later on the team collaborated to finish the project. Built mainly using WordPress and Elementor PRO, with some custom components built php.",
+      preview: "https://eskilstunabowling.se/",
       code: "https://github.com/Wztrbrg/js3-exam",
-      image: sBookster,
+      image: sBowling,
     },
     {
       id: 3,
       title: "Eskilstunamoderaterna",
       description: "Eskilstunamoderaterna is a website that is built on WordPress with Elementor PRO and utilizes the Bedrock boilerplate with Deployer. This project is for a real client and was made during my internship.",
-      preview: "",
+      preview: "https://eskilstunamoderaterna.se",
       code: "",
       image: sModerat,
     },
@@ -40,7 +41,7 @@ function CardSlider({ projectsRef }) {
       id: 4,
       title: "Fredagskollegiet",
       description: "Fredagskollegiet is a single-page website that is built on WordPress with Elementor PRO and utilizes the Bedrock boilerplate with Deployer. This project is for a real client and was made during my internship.",
-      preview: "",
+      preview: "https://fredagskollegiet.se",
       code: "",
       image: sFredag,
     },
