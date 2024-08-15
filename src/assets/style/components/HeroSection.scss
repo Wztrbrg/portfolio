@@ -5,29 +5,34 @@
   position: relative;
   width: 100%;
   max-width: $max-desk-w;
-  height: 80vh;
+  height: 100vh;
   min-height: 740px;
-  background-color: $purple;
-  border-radius: 32px;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  .right-bg-cover {
+  .bg-blur-ball-right {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: $purple;
+    opacity: 0.1;
+    filter: blur(100px);
     position: absolute;
-    bottom: 80px;
+    bottom: 0;
     right: 0;
-    width: 50px;
-    height: 100px;
-    padding-bottom: 28px;
-    background-color: $nearblack;
+  }
 
-    .right-bg-cover-inner {
-      width: 100%;
-      height: 100%;
-      background-color: $purple;
-      border-radius: 0 0 32px 0;
-    }
+  .bg-blur-ball-left {
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    background-color: $accent;
+    opacity: 0.1;
+    filter: blur(100px);
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   .hero-content {
@@ -37,119 +42,107 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 42px;
+    // padding: 42px;
+    z-index: 4;
 
-    .left {
-      width: 70%;
-      height: 100%;
+    .heading {
+      width: 100%;
+      max-width: 1000px;
+      overflow: hidden;
       display: flex;
       flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      gap: 36px;
 
-      .heading {
-        .hero-heading,
-        .hero-heading span {
-          font-family: $secondfont;
-          font-size: 68px;
+      .hero-heading,
+      .hero-heading span {
+        font-family: $secondfont;
+        font-size: 68px;
+        font-weight: 400;
+        letter-spacing: -3px;
+        line-height: 72px;
+        text-align: center;
+      }
+      .hero-heading {
+        color: $light-text;
+
+        span {
+          color: $accent;
         }
-        .hero-heading {
+      }
+
+      .btn-container {
+        // margin-top: 36px;
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        overflow: hidden;
+
+        .prim-btn {
+          opacity: 0;
+          height: 60px;
+          width: 200px;
+          scale: 0;
+          border: none;
+          border-radius: 200px;
+          color: $nearblack;
+          background-color: $accent;
+          font-size: 18px;
+          font-weight: 500;
+          transition: opacity 0.3s ease, background-color 0.3s ease,
+            scale 0.3s ease;
+        }
+
+        .prim-btn.visible:hover {
+          background-color: #a9f1cb;
+          cursor: pointer;
+        }
+
+        .prim-btn.visible {
+          opacity: 1;
+          scale: 1;
+        }
+
+        .prim-btn.hidden {
+          opacity: 0;
+          scale: 0;
+        }
+
+        .sec-btn {
+          width: 200px;
+          height: 60px;
+          border: none;
+          border-radius: 2000px;
           color: $offwhite;
-
-          span {
-            color: $accent;
-          }
+          background: none;
+          border: 1px solid $offwhite;
+          font-size: 18px;
+          font-weight: 500;
+          transition: 0.3s ease;
         }
 
-        .btn-container {
-          margin-top: 36px;
-          display: flex;
-          gap: 8px;
-
-          .prim-btn {
-            opacity: 0;
-            height: 60px;
-            width: 200px;
-            scale: 0;
-            border: none;
-            border-radius: 200px;
-            color: $nearblack;
-            background-color: $accent;
-            font-size: 18px;
-            font-weight: 400;
-            transition: opacity 0.3s ease, scale 0.3s ease;
-          }
-
-          .prim-btn.visible:hover {
-            scale: 1.15;
-            cursor: pointer;
-          }
-
-          .prim-btn.visible {
-            opacity: 1;
-            scale: 1;
-          }
-
-          .prim-btn.hidden {
-            opacity: 0;
-            scale: 0;
-          }
+        .sec-btn:hover {
+          border: 1px solid $purple;
+          color: $purple;
+          cursor: pointer;
         }
       }
-    }
 
-    .right {
-      width: 50%;
-      height: 700px;
-      background-image: url("../../images/10.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.6;
-    }
-  }
-}
-
-@media screen and (max-width: 1300px) {
-  .hero-wrapper {
-    height: 70vh;
-    min-height: none;
-    overflow: hidden;
-
-    .right-bg-cover {
-      display: none;
-
-      .right-bg-cover-inner {
-        display: none;
+      .drop-in-1 {
+        animation: drop-in 1s ease 200ms backwards;
       }
-    }
+      .drop-in-2 {
+        animation: drop-in 1s ease 700ms backwards;
+      }
 
-    .hero-content {
-      padding: 0;
-
-      .left {
-        width: 100%;
-        z-index: 200;
-
-        .heading {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-
-          .hero-heading,
-          .hero-heading span {
-            text-align: center;
-          }
+      @keyframes drop-in {
+        from {
+          opacity: 0;
+          transform: translateY(-100px);
         }
-      }
-      .right {
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        bottom: -218px;
-        right: 0;
-        opacity: 0.3;
+        to {
+          opacity: 1;
+          transform: translate(0px);
+        }
       }
     }
   }
@@ -157,20 +150,48 @@
 
 @media screen and (max-width: 892px) {
   .hero-wrapper {
-    height: 80vh;
-    min-height: initial;
+    // height: 80vh;
 
     .hero-content {
-      .left {
-        .heading {
-          padding: 16px;
-          .hero-heading,
-          .hero-heading span {
-            font-size: 10vmin;
-            line-height: 104%;
+      // padding: 16px;
+      .heading {
+        // padding: 16px;
+        .hero-heading,
+        .hero-heading span {
+          line-height: 104%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 664px) {
+  .hero-wrapper {
+    justify-content: flex-start;
+    .hero-content {
+      justify-content: flex-start;
+      .heading {
+        .hero-heading,
+        .hero-heading span {
+          text-align: start;
+          font-size: 14vmin;
+        }
+        .btn-container {
+          justify-content: flex-start;
+          flex-direction: column-reverse;
+          gap: 16px;
+
+          .prim-btn,
+          .sec-btn {
+            width: 100%;
           }
         }
       }
+    }
+    .bg-blur-ball-left,
+    .bg-blur-ball-right {
+      width: 300px;
+      height: 300px;
     }
   }
 }

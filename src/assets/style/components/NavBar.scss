@@ -16,7 +16,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 5000000;
+  z-index: 24;
 
   .top-nav.hidden {
     width: 100%;
@@ -31,20 +31,32 @@
       border: none;
 
       h2 {
-        color: $offwhite;
+        color: $light-text;
+      }
+
+      &:hover {
+        cursor: pointer;
       }
     }
 
     .nav-item.hidden {
       padding: 0 16px;
       font-weight: 700;
-      color: $offwhite;
+      color: $light-text;
       background: none;
       border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .nav-btn.hidden {
       display: none;
+    }
+
+    .nav-item.hidden.link {
+      font-size: 14px;
     }
   }
 }
@@ -60,7 +72,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 5000000;
+  z-index: 24;
   transition: opacity 0.5s ease;
 
   .top-nav.visible {
@@ -72,21 +84,33 @@
     align-items: center;
 
     .nav-logo {
-      color: $offwhite;
+      color: $light-text;
       background: none;
       border: none;
 
+      &:hover {
+        cursor: pointer;
+      }
+
       h2 {
-        color: $offwhite;
+        color: $light-text;
       }
     }
 
     .nav-item.visible {
       padding: 0 16px;
       font-weight: 700;
-      color: $offwhite;
+      color: $light-text;
       background: none;
       border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .nav-item.visible.link {
+      font-size: 14px;
     }
 
     .nav-btn.visible {
@@ -103,7 +127,7 @@
 
     .nav-btn.visible:hover {
       cursor: pointer;
-      background-color: #c3e80a;
+      background-color: #a9f1cb;
       color: $nearblack;
       transition: 0.3s ease;
     }
@@ -113,6 +137,7 @@
 @media screen and (max-width: 892px) {
   .top-nav-header {
     height: 80px;
+    z-index: 300;
 
     .menu-btn {
       position: absolute;
@@ -123,7 +148,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      z-index: 200;
+      z-index: 350;
 
       .menu-line {
         width: 100%;
@@ -163,7 +188,7 @@
     bottom: 0;
     right: 0;
     transition: height 0.3s ease;
-    z-index: 700000;
+    z-index: 23;
 
     ul {
       display: flex;
@@ -175,11 +200,15 @@
         font-size: $small-heading;
         font-weight: 200;
         background: none;
-        color: $offwhite;
+        color: $light-text;
         border: none;
         padding: 24px 0;
         border-bottom: 1px solid $offwhite;
         width: 100%;
+      }
+
+      .nav-item.link {
+        text-align: center;
       }
 
       .nav-btn {
@@ -203,10 +232,10 @@
     border: none;
     position: absolute;
     left: 28px;
-    z-index: 200;
+    z-index: 201;
 
     h2 {
-      color: $offwhite;
+      color: $light-text;
     }
   }
 }

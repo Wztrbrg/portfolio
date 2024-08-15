@@ -6,310 +6,221 @@
 }
 .project-content {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: $max-desk-w;
+  height: 100%;
+  gap: 50px;
+  // padding: 0 16px;
 
-  .left {
-    width: 65%;
-    height: 100%;
+  .projects-header {
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-between;
-    align-items: end;
-    gap: 8px;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 1000px;
 
-    .projects-header {
-      height: 60%;
-      background-color: $offwhite;
-      border-radius: 32px;
-      padding: 24px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 28px;
-
-      .projects-heading {
-        font-size: $large-heading;
-        font-weight: 400;
-        line-height: 56px;
-        letter-spacing: -1.2px;
-        color: $nearblack;
-      }
-
-      .projects-para {
-        font-size: $large-para;
-        font-weight: 200;
-        line-height: 30px;
-        letter-spacing: 1px;
-        color: $nearblack;
-      }
+    .projects-heading {
+      font-size: $large-heading;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -1.2px;
+      color: $offwhite;
+      text-align: center;
     }
-    .card-wrapper {
-      width: 100%;
-      height: 40%;
-      display: flex;
-      border-radius: 24px 24px 24px 24px;
-      gap: 8px;
 
-      .card {
+    .projects-para {
+      font-size: $large-para;
+      font-weight: 200;
+      line-height: 1.3;
+      letter-spacing: 1px;
+      color: $offwhite;
+      text-align: center;
+    }
+  }
+
+  .card-wrapper {
+    position: relative;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+
+    .card {
+      // display: flex;
+      overflow: hidden;
+      width: calc(500px - 32px);
+      height: 300px;
+      border-radius: 16px;
+      background-color: $neargrey;
+
+      .close {
+        display: none;
+      }
+
+      .top {
         position: relative;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        height: 300px;
         width: 100%;
-        height: 100%;
-        border-radius: 16px;
-        scale: 1;
-        filter: brightness(0.5);
-        transition: 0.2s ease-in-out;
-        background-color: $accent;
-
-        .overlay {
-          width: 100%;
-          height: 100%;
-          position: absolute;
-          z-index: 300;
-          opacity: 0;
-        }
-
-        .card-title {
-          display: none;
-        }
 
         .card-img {
           position: absolute;
           object-fit: cover;
-          object-position: left;
+          object-position: 50px 20px;
           width: 100%;
           height: 100%;
-          padding: 16px 0 8px 16px;
-        }
-      }
-
-      .card:hover {
-        cursor: pointer;
-        width: 120%;
-        filter: brightness(0.8);
-        z-index: 300000;
-      }
-      .card.active {
-        filter: brightness(1);
-        box-shadow: 0 20px 30px rgba(0, 0, 0, 0.154);
-        transition: 0.2s ease-in-out;
-        z-index: 300000;
-      }
-    }
-  }
-
-  .display-wrapper {
-    position: relative;
-    margin-top: -116px;
-    width: 35%;
-    height: calc(40vh + 124px);
-    min-height: 614px;
-    background-color: $nearblack;
-    border-radius: 32px;
-    padding: 8px 0 8px 8px;
-
-    .left-bg-cover {
-      position: absolute;
-      top: 36px;
-      left: -92px;
-      width: 100px;
-      height: 80px;
-      padding: 0 8px 8px 0;
-      background-color: $nearblack;
-
-      .left-bg-cover-inner {
-        width: 100%;
-        height: 100%;
-        background-color: $purple;
-        border-radius: 0 0 32px 0;
-      }
-    }
-
-    .display-card {
-      width: 100%;
-      height: 100%;
-      border-radius: 28px;
-      background-color: $secondary;
-      overflow: hidden;
-
-      .top {
-        width: 100%;
-        padding: 16px;
-
-        img {
-          width: 100%;
-          height: 100%;
-          max-height: 300px;
-          object-fit: fill;
-          object-position: center;
-          border-radius: 18px;
-          background-color: $nearblack;
-          border: 4px solid $nearblack;
-          box-shadow: 7px 7px $nearblack;
+          filter: brightness(0.5);
         }
       }
 
       .bottom {
-        width: 100%;
-        min-height: 40%;
-        padding: 8px 24px;
+        display: none;
+      }
+    }
+
+    .card.active {
+      position: relative;
+      filter: brightness(1);
+      z-index: 21;
+      height: 300px;
+
+      .close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        z-index: 23;
+        opacity: 0.8;
+      }
+
+      svg {
+        font-size: 14px;
+        color: $light-text;
+
+        path {
+          fill: $light-text;
+        }
+      }
+
+      .top {
+        .card-img {
+          filter: brightness(1);
+        }
+      }
+
+      .bottom {
+        position: absolute;
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 16px;
+        z-index: 22;
+        height: 300px;
+        width: calc(500px - 32px);
+        background-color: #383737;
+        bottom: 0;
+        left: 0;
+        padding: 20px;
+        border-radius: 16px;
 
         .display-title {
-          font-size: 28px;
-          font-weight: 600;
+          line-height: 1;
+          font-size: 20px;
+          font-weight: 300;
+          color: $light-text;
         }
 
         .display-desc {
-          font-size: 18px;
-          font-weight: 300;
-          line-height: 24px;
+          font-size: 16px;
+          line-height: 1.3;
+          font-weight: 200;
+          color: $light-text;
         }
 
         .link-container {
           position: absolute;
-          bottom: 28px;
-          right: 28px;
-          width: 100%;
+          bottom: 0;
+          right: 0;
           display: flex;
-          justify-content: flex-end;
           gap: 16px;
+          padding: 20px;
 
           .display-link {
-            text-decoration: underline;
+            padding: 6px 12px;
+            border: 1px solid $light-text;
+            border-radius: 120px;
+          }
+
+          .display-link,
+          .display-no-link {
+            color: $light-text;
+            font-size: 16px;
+            line-height: 1.3;
+            font-weight: 200;
+            opacity: 0.8;
           }
         }
+      }
+    }
+
+    .card.deactive:hover {
+      cursor: pointer;
+      background-color: #424242;
+      transition: 0.4s;
+
+      .card-img {
+        filter: brightness(1);
+        transition: 0.4s;
       }
     }
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 970px) {
   .project-content {
-    flex-direction: column;
-    gap: 8px;
-
-    .left {
-      width: 100%;
-      height: 50%;
-      min-height: 500px;
-    }
-
-    .display-wrapper {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 50%;
-      min-height: 400px;
-
-      .left-bg-cover {
-        display: none;
+    .projects-header {
+      .projects-heading {
+        font-size: $small-heading;
+        line-height: 40px;
       }
 
-      .left-bg-cover-inner {
-        display: none;
-      }
-
-      .display-card {
-        display: flex;
-
-        .top {
-          height: 100%;
-
-          img {
-            max-height: none;
-            min-width: 500px;
-            border-radius: 24px;
-            object-fit: cover;
-            object-position: left;
-          }
-        }
+      .projects-para {
+        font-size: $small-para;
+        line-height: 22px;
       }
     }
   }
 }
 
-@media screen and (max-width: 892px) {
+@media screen and (max-width: 664px) {
   .project-content {
-    height: 100%;
-    .left {
-      .projects-header {
-        min-height: 300px;
-        .projects-heading {
-          font-size: $small-heading;
-          line-height: 40px;
-        }
-
-        .projects-para {
-          font-size: $small-para;
-          line-height: 22px;
-        }
-      }
-      .card-wrapper {
-        height: 100%;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-
-        .card {
-          min-height: 250px;
-          width: 250px;
-          flex: 0 0 auto;
-          scroll-snap-align: start;
-        }
-
-        .card:hover {
-          width: 250px;
-        }
+    .projects-header {
+      .projects-heading,
+      .projects-para {
+        text-align: start;
       }
     }
-    .display-wrapper {
-      height: 100%;
-      min-height: initial;
+    .card-wrapper {
+      width: 100%;
+      gap: 28px;
+      .card {
+        width: 100%;
+        height: 258px;
+      }
 
-      .display-card {
-        flex-direction: column;
-        height: 100%;
-        min-height: initial;
-        background-color: $secondary;
-        padding: 0;
-
-        .top {
-          height: 250px;
-          width: 100%;
-          padding: 0;
-          min-height: initial;
-          border-radius: 0;
-          padding: 8px;
-
-          img {
-            width: 100%;
-            height: 100%;
-            min-height: initial;
-            min-width: initial;
-            object-position: top left;
-            box-shadow: none;
-            border: none;
-            border-radius: 24px;
-            border: 6px solid $nearblack;
-          }
-        }
-
+      .card.active {
+        // height: 100%;
         .bottom {
-          height: 60%;
-          min-height: initial;
-          background-color: $secondary;
+          width: 100%;
+          height: 100%;
+        }
+      }
 
-          .display-desc {
-            margin-bottom: 56px;
-          }
+      .card.deactive:hover {
+        transition: none;
+
+        .card-img {
+          transition: none;
         }
       }
     }

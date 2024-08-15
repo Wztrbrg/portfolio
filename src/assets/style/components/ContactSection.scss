@@ -4,215 +4,137 @@
 .contact-wrapper {
   width: 100%;
   max-width: $max-desk-w;
-  height: calc(60vh - 90px);
-  min-height: 670px;
   display: flex;
-  gap: 8px;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  // padding: 0 16px;
 
-  .left {
-    width: 50%;
-    height: 100%;
-    background-color: $accent;
-    border-radius: 32px;
+  .contact-header {
+    width: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
+    gap: 16px;
+    max-width: 1000px;
 
-    .contact-form {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      border: 4px solid $nearblack;
-      border-radius: 24px;
-      box-shadow: 6px 6px $nearblack;
-      width: 60%;
-      padding: 30px;
-      background-color: $offwhite;
+    .contact-heading {
+      font-size: 58px;
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -1.2px;
+      color: $light-text;
+      text-align: center;
+    }
 
-      .field-container {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        gap: 8px;
-
-        .contact-lbl {
-          font-size: 20px;
-          font-weight: 500;
-        }
-
-        .contact-input {
-          font-size: 18px;
-          font-weight: 300;
-          line-height: 24px;
-          padding: 8px;
-          background: none;
-          border: none;
-          border-bottom: 1px solid $nearblack;
-          outline: none;
-          resize: none;
-        }
-
-        .contact-input:focus {
-          border: 2px solid $nearblack;
-          border-radius: 4px;
-        }
-      }
-
-      .submit-btn {
-        width: 100%;
-        font-size: 16px;
-        font-weight: 600;
-        padding: 12px;
-        border-radius: 2000px;
-        border: none;
-        background-color: $secondary;
-        color: $nearblack;
-      }
+    .contact-para {
+      font-size: 20px;
+      font-weight: 200;
+      line-height: 1.3;
+      letter-spacing: 1px;
+      color: $light-text;
+      text-align: center;
     }
   }
 
-  .right {
-    width: 50%;
-    height: 100%;
+  .contact-links {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
 
-    .top {
-      position: relative;
-      width: 100%;
-      height: 60%;
-      background-color: $purple;
-      border-radius: 32px;
-    }
-
-    .top::before {
-      content: " ";
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background-image: url(../../images/contact-img.png);
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center;
-      opacity: 0.5;
-    }
-
-    .bottom {
-      width: 100%;
-      height: 40%;
-      background-color: $offwhite;
-      border-radius: 32px;
-      padding: 24px;
+    .contact-card-purple,
+    .contact-card-green {
       display: flex;
-      flex-direction: column;
       justify-content: center;
-      gap: 28px;
+      align-items: center;
+      width: calc(500px - 32px);
+      height: 120px;
+      border-radius: 16px;
+      gap: 24px;
+      background-color: $neargrey;
 
-      .contact-heading {
-        font-size: 58px;
-        font-weight: 400;
-        line-height: 56px;
-        letter-spacing: -1.2px;
-        color: $nearblack;
+      svg {
+        font-size: 36px;
+        path {
+          fill: $light-text;
+        }
       }
 
-      .contact-para {
-        font-size: 20px;
+      .contact-card-para {
+        font-size: 24px;
         font-weight: 200;
         line-height: 30px;
         letter-spacing: 1px;
-        color: $nearblack;
+        color: $light-text;
+      }
+    }
+
+    .contact-card-purple {
+      &:hover {
+        background-color: #3e3642;
+        box-shadow: 0 20px 70px #6720bd28;
+        transition: 0.3s ease-in-out;
+      }
+    }
+
+    .contact-card-green {
+      &:hover {
+        background-color: #36423e;
+        box-shadow: 0 20px 70px #20bd7c23;
+        transition: 0.3s ease-in-out;
       }
     }
   }
 }
 
-@media screen and (max-width: 1300px) {
+@media screen and (max-width: 970px) {
   .contact-wrapper {
-    .left {
-      width: 70%;
-      padding-left: 8px;
-      padding-right: 16px;
+    .contact-header {
+      .contact-heading {
+        font-size: $small-heading;
+        line-height: 40px;
+      }
 
-      .contact-form {
-        width: 100%;
+      .contact-para {
+        font-size: $small-para;
+        line-height: 22px;
       }
     }
 
-    .right {
-      .top {
-        height: 50%;
-      }
-
-      .bottom {
-        height: 50%;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 1014px) {
-  .contact-wrapper {
-    flex-direction: column-reverse;
-    align-items: center;
-    height: 100%;
-
-    .left {
-      width: 100%;
-      height: 100%;
-      padding-bottom: 16px;
-      padding-top: 8px;
-    }
-
-    .right {
-      width: 100%;
-      height: 100%;
-      flex-direction: row;
-
-      .top,
-      .bottom {
-        height: 100%;
-        min-height: 400px;
-        width: 50%;
-      }
-    }
-  }
-}
-
-@media screen and (max-width: 892px) {
-  .contact-wrapper {
-    height: 100%;
-    .right {
-      flex-direction: column;
-      height: 600px;
-
-      .top {
-        width: 100%;
-        height: 50%;
-        min-height: initial;
-      }
-
-      .bottom {
-        width: 100%;
-        height: 50%;
-        min-height: initial;
-
-        .contact-heading {
-          font-size: $small-heading;
-          line-height: 40px;
+    .contact-links {
+      .contact-card-purple,
+      .contact-card-green {
+        svg {
+          font-size: 24px;
         }
 
-        .contact-para {
+        .contact-card-para {
           font-size: $small-para;
-          line-height: 22px;
         }
       }
     }
+  }
+}
 
-    .left {
-      height: 100%;
+@media screen and (max-width: 664px) {
+  .contact-wrapper {
+    .contact-header {
+      align-items: flex-start;
+      .contact-heading,
+      .contact-para {
+        text-align: start;
+      }
+    }
+    .contact-links {
+      flex-wrap: nowrap;
+      flex-direction: column;
+      width: 100%;
+      .contact-card-purple,
+      .contact-card-green {
+        width: 100%;
+        height: 100px;
+      }
     }
   }
 }
