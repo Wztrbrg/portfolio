@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.9fbf94e0.css",
-    "main.js": "/portfolio/static/js/main.88b6eb9d.js",
+    "main.js": "/portfolio/static/js/main.cfc71960.js",
     "static/media/lego-preview.png": "/portfolio/static/media/lego-preview.5904101c362c3a23d430.png",
     "static/media/emoderaterna-preview.png": "/portfolio/static/media/emoderaterna-preview.d9c993d5e1ca49b0c92c.png",
     "static/media/Jonathan-Andersson-CV.pdf": "/portfolio/static/media/Jonathan-Andersson-CV.052aff9484d901be3b30.pdf",
@@ -12,10 +12,10 @@
     "static/media/per.jpg": "/portfolio/static/media/per.53aea7e6ab7705910533.jpg",
     "index.html": "/portfolio/index.html",
     "main.9fbf94e0.css.map": "/portfolio/static/css/main.9fbf94e0.css.map",
-    "main.88b6eb9d.js.map": "/portfolio/static/js/main.88b6eb9d.js.map"
+    "main.cfc71960.js.map": "/portfolio/static/js/main.cfc71960.js.map"
   },
   "entrypoints": [
     "static/css/main.9fbf94e0.css",
-    "static/js/main.88b6eb9d.js"
+    "static/js/main.cfc71960.js"
   ]
 }
