@@ -26,7 +26,7 @@ function CardSlider({ projectsRef }) {
       title: "Eskilstuna Bowlingcenter",
       description: "During my internship I got the chance to update the website for Eskilstuna Bowlingcenter. At first I worked alone but later on the team collaborated to finish the project. Built mainly using WordPress and Elementor PRO, with some custom components built php.",
       preview: "https://eskilstunabowling.se/",
-      code: "https://github.com/Wztrbrg/js3-exam",
+      code: "",
       image: sBowling,
     },
     {
