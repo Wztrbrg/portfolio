@@ -1,21 +1,22 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.9fbf94e0.css",
-    "main.js": "/portfolio/static/js/main.cfc71960.js",
+    "main.css": "/portfolio/static/css/main.e571313d.css",
+    "main.js": "/portfolio/static/js/main.d97f830c.js",
     "static/media/lego-preview.png": "/portfolio/static/media/lego-preview.5904101c362c3a23d430.png",
+    "static/media/hallbarservice-preview.png": "/portfolio/static/media/hallbarservice-preview.a51b7b3553efcde24030.png",
     "static/media/emoderaterna-preview.png": "/portfolio/static/media/emoderaterna-preview.d9c993d5e1ca49b0c92c.png",
     "static/media/Jonathan-Andersson-CV.pdf": "/portfolio/static/media/Jonathan-Andersson-CV.052aff9484d901be3b30.pdf",
     "static/media/eskilstunabowling-preview.png": "/portfolio/static/media/eskilstunabowling-preview.586019537d0563afe7f5.png",
-    "static/media/bookster-preview.png": "/portfolio/static/media/bookster-preview.8021992c4fab584c21a4.png",
     "static/media/fredags-preview.png": "/portfolio/static/media/fredags-preview.d7616fbfe591b797b0a5.png",
     "static/media/CV-Bild1.png": "/portfolio/static/media/CV-Bild1.a0f31b0307a0061f2d4e.png",
+    "static/media/leadsgenie-preview.png": "/portfolio/static/media/leadsgenie-preview.2457f1bfb0658b9ddc35.png",
     "static/media/per.jpg": "/portfolio/static/media/per.53aea7e6ab7705910533.jpg",
     "index.html": "/portfolio/index.html",
-    "main.9fbf94e0.css.map": "/portfolio/static/css/main.9fbf94e0.css.map",
-    "main.cfc71960.js.map": "/portfolio/static/js/main.cfc71960.js.map"
+    "main.e571313d.css.map": "/portfolio/static/css/main.e571313d.css.map",
+    "main.d97f830c.js.map": "/portfolio/static/js/main.d97f830c.js.map"
   },
   "entrypoints": [
-    "static/css/main.9fbf94e0.css",
-    "static/js/main.cfc71960.js"
+    "static/css/main.e571313d.css",
+    "static/js/main.d97f830c.js"
   ]
 }
