@@ -18,7 +18,7 @@ function AboutSection({ aboutRef }) {
     {
       title: 'Andreas Jamous',
       role: 'VD Hållbar Fastighetsservice Syd AB',
-      description: '"npmJonathan Andersson hjälpte mig att skapa en professionell och användarvänlig hemsida som överträffade mina förväntningar. Han var lyhörd, snabb med svar och kom med kreativa lösningar. Jag rekommenderar honom varmt till andra företag som behöver en skicklig webbutvecklare!"',
+      description: '"Jonathan Andersson hjälpte mig att skapa en professionell och användarvänlig hemsida som överträffade mina förväntningar. Han var lyhörd, snabb med svar och kom med kreativa lösningar. Jag rekommenderar honom varmt till andra företag som behöver en skicklig webbutvecklare!"',
       image: secondUser,
     },
   ];
