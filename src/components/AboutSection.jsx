@@ -1,6 +1,7 @@
 import "../assets/style/components/AboutSection.scss";
 import React, { useState, useEffect } from "react";
 import firstUser from "../assets/images/per.jpg";
+import secondUser from "../assets/images/client.jpg";
 import AnimatedSection from "./AnimatedSection";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -17,8 +18,8 @@ function AboutSection({ aboutRef }) {
     {
       title: 'Andreas Jamous',
       role: 'VD Hållbar Fastighetsservice Syd AB',
-      description: '"Min största utmaning som nystartad företagare var att skapa en professionell och användarvänlig hemsida. Samarbetet med Jonathan har varit smidigt och professionellt – han har lyssnat på mina önskemål, kommit med kreativa lösningar och levererat en hemsida som överträffade mina förväntningar. Han svarade snabbt på mina frågor och gav mig trygghet genom hela processen. Hemsidan ser nu bättre ut än konkurrenternas, och jag rekommenderar varmt Jonathan till andra företag som behöver en skicklig webbutvecklare."',
-      image: firstUser,
+      description: '"npmJonathan Andersson hjälpte mig att skapa en professionell och användarvänlig hemsida som överträffade mina förväntningar. Han var lyhörd, snabb med svar och kom med kreativa lösningar. Jag rekommenderar honom varmt till andra företag som behöver en skicklig webbutvecklare!"',
+      image: secondUser,
     },
   ];
 
