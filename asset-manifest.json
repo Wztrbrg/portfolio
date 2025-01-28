@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.e571313d.css",
-    "main.js": "/portfolio/static/js/main.d97f830c.js",
+    "main.css": "/portfolio/static/css/main.60af48ac.css",
+    "main.js": "/portfolio/static/js/main.d53d5d97.js",
     "static/media/lego-preview.png": "/portfolio/static/media/lego-preview.5904101c362c3a23d430.png",
     "static/media/hallbarservice-preview.png": "/portfolio/static/media/hallbarservice-preview.a51b7b3553efcde24030.png",
     "static/media/emoderaterna-preview.png": "/portfolio/static/media/emoderaterna-preview.d9c993d5e1ca49b0c92c.png",
@@ -11,12 +11,16 @@
     "static/media/CV-Bild1.png": "/portfolio/static/media/CV-Bild1.a0f31b0307a0061f2d4e.png",
     "static/media/leadsgenie-preview.png": "/portfolio/static/media/leadsgenie-preview.2457f1bfb0658b9ddc35.png",
     "static/media/per.jpg": "/portfolio/static/media/per.53aea7e6ab7705910533.jpg",
+    "static/media/slick.svg": "/portfolio/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/portfolio/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/portfolio/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/portfolio/index.html",
-    "main.e571313d.css.map": "/portfolio/static/css/main.e571313d.css.map",
-    "main.d97f830c.js.map": "/portfolio/static/js/main.d97f830c.js.map"
+    "static/media/slick.woff": "/portfolio/static/media/slick.295183786cd8a1389865.woff",
+    "main.60af48ac.css.map": "/portfolio/static/css/main.60af48ac.css.map",
+    "main.d53d5d97.js.map": "/portfolio/static/js/main.d53d5d97.js.map"
   },
   "entrypoints": [
-    "static/css/main.e571313d.css",
-    "static/js/main.d97f830c.js"
+    "static/css/main.60af48ac.css",
+    "static/js/main.d53d5d97.js"
   ]
 }
