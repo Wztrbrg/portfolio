@@ -2,8 +2,36 @@ import "../assets/style/components/AboutSection.scss";
 import React, { useState, useEffect } from "react";
 import firstUser from "../assets/images/per.jpg";
 import AnimatedSection from "./AnimatedSection";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function AboutSection({ aboutRef }) {
+  const reviews = [
+    {
+      title: 'Per Lind Forsberg',
+      role: 'VD Digitalera AB',
+      description: '"Jonathan har gjort sin praktik hos oss och jobbat med både egna frontend-projekt och skarpa WordPress-projekt till kunder. Han har sinne för både design och programmering, vilket är sällsynt och en bra egenskap i det här yrket. Han är också trevlig och en uppskattad kollega som bidrar till trivsel på kontoret. Jag kan varmt rekommendera honom!"',
+      image: firstUser,
+    },
+    {
+      title: 'Andreas Jamous',
+      role: 'VD Hållbar Fastighetsservice Syd AB',
+      description: '"Min största utmaning som nystartad företagare var att skapa en professionell och användarvänlig hemsida. Samarbetet med Jonathan har varit smidigt och professionellt – han har lyssnat på mina önskemål, kommit med kreativa lösningar och levererat en hemsida som överträffade mina förväntningar. Han svarade snabbt på mina frågor och gav mig trygghet genom hela processen. Hemsidan ser nu bättre ut än konkurrenternas, och jag rekommenderar varmt Jonathan till andra företag som behöver en skicklig webbutvecklare."',
+      image: firstUser,
+    },
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 10000,
+    arrows: false,
+  };
   
   return (
     <AnimatedSection>
@@ -21,21 +49,22 @@ function AboutSection({ aboutRef }) {
         <div className="bottom">
           <h2 className="testimonial-heading">See what others say about me</h2>
           <div className="testimonial-container">
-            <div className="testimonial-card">
-              <p className="testimonial-card-description">
-                "Jonathan har gjort sin praktik hos oss och jobbat med både egna frontend-projekt och skarpa WordPress-projekt till kunder. Han har sinne för både design och programmering, vilket är sällsynt och en bra egenskap i det här yrket.
-              </p>
-              <p className="testimonial-card-description">
-                Han är också trevlig och en uppskattad kollega som bidrar till trivsel på kontoret. Jag kan varmt rekommendera honom!"
-              </p>
-              <div className="person-container">
-                <img className="testimonial-card-image" src={firstUser}></img>
-                <div className="person-text-container">
-                  <h2 className="testimonial-card-title">Per Lind Forsberg</h2>
-                  <h3 className="testimonial-card-role">CEO of Digitalera AB</h3>
+            <Slider {...settings}>
+              {reviews.map((review, index) => (
+                <div key={index} className="testimonial-card">
+                  <p className="testimonial-card-description">
+                    {review.description}
+                  </p>
+                  <div className="person-container">
+                    <img className="testimonial-card-image" src={review.image}></img>
+                    <div className="person-text-container">
+                      <h2 className="testimonial-card-title">{review.title}</h2>
+                      <h3 className="testimonial-card-role">{review.role}</h3>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              ))}
+            </Slider>
           </div>
         </div>
         <div className="bg-blur-ball-right"></div>
